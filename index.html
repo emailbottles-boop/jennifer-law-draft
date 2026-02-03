@@ -9,32 +9,28 @@
     :root {
       --navy-dark: #0b1c2d;
       --navy-main: #132f4c;
+      --navy-soft: #3f6c8f;
       --gold: #c8a44a;
       --bg: #f5f7fa;
       --card: #ffffff;
-      --text: #1a2633;
+      --text: #0b1c2d;
     }
 
     * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.75;
-      font-size: 16px;
+      line-height: 1.7;
     }
 
     /* ===== HEADER ===== */
     header {
-      background:
-        linear-gradient(rgba(11,28,45,0.85), rgba(11,28,45,0.85)),
-        url("legalbooks.jpeg") center / cover no-repeat;
+      background: linear-gradient(135deg, var(--navy-dark), var(--navy-main));
       color: white;
-      padding: 5.5rem 1.5rem 4.5rem;
+      padding: 5rem 1.5rem 4rem;
       text-align: center;
     }
 
@@ -45,16 +41,16 @@
     }
 
     header p {
-      max-width: 640px;
+      max-width: 600px;
       margin: 0 auto;
-      font-size: 1.05rem;
       opacity: 0.95;
+      font-size: 1.05rem;
     }
 
     .motto {
-      margin-top: 1.6rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
+      margin-top: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
       font-size: 0.75rem;
       color: var(--gold);
       text-transform: uppercase;
@@ -63,8 +59,7 @@
     nav {
       display: flex;
       justify-content: center;
-      align-items: center;
-      gap: 1.8rem;
+      gap: 2rem;
       margin-top: 3rem;
       flex-wrap: wrap;
     }
@@ -72,25 +67,13 @@
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 0.18em;
       font-size: 0.7rem;
       opacity: 0.85;
     }
 
     nav a:hover { opacity: 1; }
-
-    .resources-btn {
-      background: var(--gold);
-      color: var(--navy-dark);
-      padding: 0.6rem 1.2rem;
-      border-radius: 999px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-decoration: none;
-      opacity: 1;
-    }
 
     /* ===== SECTIONS ===== */
     section {
@@ -101,21 +84,10 @@
 
     section h2 {
       text-align: center;
-      margin-bottom: 3.5rem;
-      font-size: 1.7rem;
+      margin-bottom: 3rem;
+      font-size: 1.8rem;
       letter-spacing: 0.22em;
       color: var(--navy-main);
-      position: relative;
-    }
-
-    section h2::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 2px;
-      background: var(--gold);
-      margin: 1.2rem auto 0;
-      opacity: 0.8;
     }
 
     /* ===== PRACTICES ===== */
@@ -128,85 +100,42 @@
     .practice-card {
       background: var(--card);
       border-radius: 22px;
-      padding: 3rem 2.5rem;
+      padding: 2.5rem;
       box-shadow: 0 20px 45px rgba(0,0,0,0.08);
-      text-align: center;
-      position: relative;
-    }
-
-    .practice-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 40%;
-      height: 3px;
-      background: var(--gold);
-      border-radius: 0 0 4px 4px;
     }
 
     .practice-card h3 {
-      margin: 0;
+      margin-top: 0;
       font-size: 1.3rem;
       font-weight: 700;
-      letter-spacing: 0.08em;
       color: var(--navy-dark);
     }
 
     .practice-card p {
-      margin-top: 1rem;
       font-size: 1.05rem;
       opacity: 0.9;
     }
 
-    /* ===== ABOUT ===== */
-    .about {
+    /* ===== ABOUT (FIXED) ===== */
+    .about-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 3rem;
+      gap: 2.5rem;
     }
 
     .about-card {
       background: var(--card);
       border-radius: 22px;
-      padding: 3rem;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.07);
+      padding: 2.8rem;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.08);
     }
 
-    /* ===== RESOURCES ===== */
-    .resources-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2.5rem;
-    }
-
-    .resource-card {
-      background: var(--card);
-      border-radius: 22px;
-      padding: 3rem;
-      text-align: center;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.08);
-    }
-
-    .resource-card h3 {
-      margin-top: 0;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--navy-dark);
-    }
-
-    .resource-card a {
-      display: inline-block;
-      margin-top: 1.4rem;
-      padding: 0.8rem 1.6rem;
-      border-radius: 999px;
-      background: var(--navy-main);
-      color: white;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-decoration: none;
+    .about-card p {
+      font-size: 1.1rem;
+      font-weight: 500;
+      line-height: 1.8;
+      opacity: 0.95;
+      margin: 0;
     }
 
     /* ===== CONTACT ===== */
@@ -214,42 +143,50 @@
       text-align: center;
       background: linear-gradient(135deg, #eef2f7, #e4ebf3);
       border-radius: 30px;
-      padding: 4.5rem 2.5rem;
+      padding: 4.5rem 2rem;
     }
 
     form {
-      max-width: 500px;
-      margin: 2.5rem auto 0;
+      max-width: 520px;
+      margin: 2rem auto 0;
       display: flex;
       flex-direction: column;
       gap: 1.1rem;
     }
 
     input, textarea {
-      padding: 1rem 1.1rem;
-      border-radius: 12px;
+      padding: 1rem;
+      border-radius: 14px;
       border: 1px solid #ccd6e0;
       font-family: inherit;
       font-size: 0.95rem;
     }
 
     button {
-      margin-top: 1.4rem;
+      margin-top: 1.5rem;
       padding: 1rem 2.4rem;
       border-radius: 999px;
       border: none;
       background: var(--navy-main);
       color: white;
-      font-weight: 600;
-      letter-spacing: 0.18em;
+      font-weight: 700;
+      letter-spacing: 0.15em;
       font-size: 0.75rem;
       cursor: pointer;
     }
 
+    button:hover { background: var(--navy-dark); }
+
+    .disclaimer {
+      font-size: 0.7rem;
+      opacity: 0.6;
+      margin-top: 1rem;
+    }
+
     footer {
       text-align: center;
-      padding: 2.5rem 1rem;
-      font-size: 0.75rem;
+      padding: 2rem 1rem;
+      font-size: 0.7rem;
       opacity: 0.6;
     }
   </style>
@@ -265,69 +202,68 @@
   <nav>
     <a href="#practice">PRACTICES</a>
     <a href="#about">ABOUT</a>
-    <a href="#resources" class="resources-btn">RESOURCES</a>
     <a href="#contact">CONTACT</a>
   </nav>
 </header>
 
 <section id="practice">
   <h2>PRACTICES</h2>
+
   <div class="practice-grid">
     <div class="practice-card">
       <h3>Criminal Defense</h3>
-      <p>Misdemeanor and felony defense with focused advocacy.</p>
+      <p>Strategic defense for misdemeanor and felony charges.</p>
     </div>
+
     <div class="practice-card">
       <h3>Public Defense</h3>
-      <p>Protecting constitutional rights and due process.</p>
+      <p>Ensuring constitutional rights and fair representation.</p>
     </div>
+
     <div class="practice-card">
       <h3>Legal Consultation</h3>
-      <p>Clear guidance so you understand your options.</p>
+      <p>Clear, honest guidance to understand your options.</p>
     </div>
   </div>
 </section>
 
 <section id="about">
   <h2>ABOUT</h2>
-  <div class="about">
-    <div class="about-card">
-      Jennifer Stewart is a dedicated public defense attorney committed to protecting
-      individual rights and ensuring justice remains accessible.
-    </div>
-    <div class="about-card">
-      Every case is handled with preparation, discretion, and respect for the law.
-    </div>
-  </div>
-</section>
 
-<section id="resources">
-  <h2>COMMUNITY RESOURCES</h2>
-  <div class="resources-grid">
-    <div class="resource-card">
-      <h3>Washington DSHS</h3>
-      <a href="https://www.dshs.wa.gov" target="_blank">VISIT</a>
+  <div class="about-grid">
+    <div class="about-card">
+      <p>
+        Jennifer Stewart is a dedicated public defense attorney committed to protecting
+        individual rights and ensuring justice remains accessible to all.
+      </p>
     </div>
-    <div class="resource-card">
-      <h3>Northwest Justice Project</h3>
-      <a href="https://nwjustice.org" target="_blank">VISIT</a>
-    </div>
-    <div class="resource-card">
-      <h3>Homeless Shelters</h3>
-      <a href="https://www.homelessshelterdirectory.org/state/washington" target="_blank">FIND HELP</a>
+
+    <div class="about-card">
+      <p>
+        Every case is approached with preparation, discretion, and respect for the law.
+        Clients receive transparency, professionalism, and strong advocacy.
+      </p>
     </div>
   </div>
 </section>
 
 <section id="contact">
   <h2>CONTACT</h2>
+
   <div class="contact">
+    <h3>Schedule a Consultation</h3>
+    <p>Confidential and judgment-free communication.</p>
+
     <form action="https://formspree.io/f/mnjzwvzl" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Briefly describe your situation" required></textarea>
       <button type="submit">GET IN TOUCH</button>
     </form>
+
+    <p class="disclaimer">
+      Submitting this form does not create an attorney-client relationship.
+    </p>
   </div>
 </section>
 
