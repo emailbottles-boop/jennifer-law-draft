@@ -17,9 +17,7 @@
 
     * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -80,10 +78,7 @@
       opacity: 0.85;
     }
 
-    nav a:hover {
-      opacity: 1;
-      text-decoration: underline;
-    }
+    nav a:hover { opacity: 1; }
 
     .resources-btn {
       background: var(--gold);
@@ -97,77 +92,113 @@
       opacity: 1;
     }
 
-    .resources-btn:hover {
-      background: #e0bb5b;
-      text-decoration: none;
-    }
-
     /* ===== SECTIONS ===== */
     section {
-      padding: 4.5rem 1.5rem;
+      padding: 5rem 1.5rem;
       max-width: 1100px;
       margin: 0 auto;
     }
 
     section h2 {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 3.5rem;
       font-size: 1.7rem;
       letter-spacing: 0.22em;
       color: var(--navy-main);
+      position: relative;
     }
 
-    /* ===== PRACTICE ===== */
+    section h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      margin: 1.2rem auto 0;
+      opacity: 0.8;
+    }
+
+    /* ===== PRACTICES ===== */
     .practice-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
+      gap: 2.5rem;
     }
 
     .practice-card {
       background: var(--card);
-      border-radius: 18px;
-      padding: 2.3rem;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+      border-radius: 22px;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+      text-align: center;
+      position: relative;
+    }
+
+    .practice-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40%;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 0 0 4px 4px;
+    }
+
+    .practice-card h3 {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--navy-dark);
+    }
+
+    .practice-card p {
+      margin-top: 1rem;
+      font-size: 1.05rem;
+      opacity: 0.9;
     }
 
     /* ===== ABOUT ===== */
     .about {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 3rem;
     }
 
     .about-card {
       background: var(--card);
-      border-radius: 20px;
-      padding: 2.5rem;
-      box-shadow: 0 16px 35px rgba(0,0,0,0.07);
+      border-radius: 22px;
+      padding: 3rem;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.07);
     }
 
     /* ===== RESOURCES ===== */
     .resources-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
+      gap: 2.5rem;
     }
 
     .resource-card {
       background: var(--card);
-      border-radius: 20px;
-      padding: 2.5rem;
+      border-radius: 22px;
+      padding: 3rem;
       text-align: center;
       box-shadow: 0 18px 40px rgba(0,0,0,0.08);
     }
 
     .resource-card h3 {
       margin-top: 0;
+      font-size: 1.2rem;
+      font-weight: 700;
       color: var(--navy-dark);
     }
 
     .resource-card a {
       display: inline-block;
-      margin-top: 1.2rem;
+      margin-top: 1.4rem;
       padding: 0.8rem 1.6rem;
       border-radius: 999px;
       background: var(--navy-main);
@@ -178,21 +209,17 @@
       text-decoration: none;
     }
 
-    .resource-card a:hover {
-      background: var(--navy-dark);
-    }
-
     /* ===== CONTACT ===== */
     .contact {
       text-align: center;
       background: linear-gradient(135deg, #eef2f7, #e4ebf3);
-      border-radius: 26px;
-      padding: 4rem 2rem;
+      border-radius: 30px;
+      padding: 4.5rem 2.5rem;
     }
 
     form {
       max-width: 500px;
-      margin: 2.2rem auto 0;
+      margin: 2.5rem auto 0;
       display: flex;
       flex-direction: column;
       gap: 1.1rem;
@@ -207,7 +234,7 @@
     }
 
     button {
-      margin-top: 1.2rem;
+      margin-top: 1.4rem;
       padding: 1rem 2.4rem;
       border-radius: 999px;
       border: none;
@@ -221,7 +248,7 @@
 
     footer {
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
       font-size: 0.75rem;
       opacity: 0.6;
     }
@@ -236,19 +263,28 @@
   <div class="motto">Public Defence You Can Trust</div>
 
   <nav>
-    <a href="#practice">PRACTICE</a>
+    <a href="#practice">PRACTICES</a>
     <a href="#about">ABOUT</a>
-    <a href="#contact">CONTACT</a>
     <a href="#resources" class="resources-btn">RESOURCES</a>
+    <a href="#contact">CONTACT</a>
   </nav>
 </header>
 
 <section id="practice">
-  <h2>PRACTICE AREAS</h2>
+  <h2>PRACTICES</h2>
   <div class="practice-grid">
-    <div class="practice-card">Criminal Defense</div>
-    <div class="practice-card">Public Defense</div>
-    <div class="practice-card">Legal Consultation</div>
+    <div class="practice-card">
+      <h3>Criminal Defense</h3>
+      <p>Misdemeanor and felony defense with focused advocacy.</p>
+    </div>
+    <div class="practice-card">
+      <h3>Public Defense</h3>
+      <p>Protecting constitutional rights and due process.</p>
+    </div>
+    <div class="practice-card">
+      <h3>Legal Consultation</h3>
+      <p>Clear guidance so you understand your options.</p>
+    </div>
   </div>
 </section>
 
@@ -267,30 +303,18 @@
 
 <section id="resources">
   <h2>COMMUNITY RESOURCES</h2>
-
   <div class="resources-grid">
     <div class="resource-card">
       <h3>Washington DSHS</h3>
-      <p>Food, cash, medical, and housing assistance.</p>
-      <a href="https://www.dshs.wa.gov" target="_blank">VISIT DSHS</a>
+      <a href="https://www.dshs.wa.gov" target="_blank">VISIT</a>
     </div>
-
     <div class="resource-card">
-      <h3>Homeless Shelter Directory</h3>
-      <p>Emergency housing and shelter services.</p>
-      <a href="https://www.homelessshelterdirectory.org/state/washington" target="_blank">FIND SHELTERS</a>
+      <h3>Northwest Justice Project</h3>
+      <a href="https://nwjustice.org" target="_blank">VISIT</a>
     </div>
-
     <div class="resource-card">
-      <h3>WA LawHelp</h3>
-      <p>Free legal information and self-help resources.</p>
-      <a href="https://www.washingtonlawhelp.org" target="_blank">GET HELP</a>
-    </div>
-
-    <div class="resource-card">
-      <h3>Crisis Connections</h3>
-      <p>24-hour crisis and support line.</p>
-      <a href="https://www.crisisconnections.org" target="_blank">CALL SUPPORT</a>
+      <h3>Homeless Shelters</h3>
+      <a href="https://www.homelessshelterdirectory.org/state/washington" target="_blank">FIND HELP</a>
     </div>
   </div>
 </section>
