@@ -116,7 +116,6 @@ section h2{
 }
 
 .practice-card{
-  position:relative;
   background:var(--card);
   padding:3.5rem;
   border-radius:26px;
@@ -138,13 +137,12 @@ section h2{
 }
 
 .about-card{
-  position:relative;
   background:var(--card);
   padding:3.5rem;
   border-radius:26px;
   box-shadow:0 20px 45px rgba(0,0,0,.08);
-  font-size:1.25rem;
   color:var(--soft);
+  font-size:1.25rem;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -169,7 +167,6 @@ section h2{
 }
 
 .resource-card{
-  position:relative;
   background:white;
   padding:3.2rem;
   border-radius:26px;
@@ -183,6 +180,11 @@ section h2{
   box-shadow:0 28px 60px rgba(0,0,0,.12);
 }
 
+.resource-card p{
+  color:var(--soft);
+  font-size:1.2rem;
+}
+
 .resource-card a{
   display:inline-flex;
   margin-top:2rem;
@@ -191,6 +193,8 @@ section h2{
   background:var(--navy);
   color:white;
   text-decoration:none;
+  font-size:.95rem;
+  letter-spacing:.15em;
   font-weight:600;
   transition:transform .25s ease, box-shadow .25s ease;
 }
@@ -293,14 +297,42 @@ footer{
 
 <section id="resources">
   <h2>COMMUNITY RESOURCES</h2>
+  <p class="section-sub">Additional support services available to clients and families.</p>
 
   <div class="resources-grid">
     <div class="resource-card">
       <h3>Food Banks</h3>
+      <p>Free food assistance and meal programs.</p>
       <a href="https://www.feedingamerica.org" target="_blank">FIND FOOD</a>
     </div>
+
+    <div class="resource-card">
+      <h3>Free Meditation</h3>
+      <p>Stress relief and guided mindfulness.</p>
+      <a href="https://www.uclahealth.org/programs/marc/free-guided-meditations" target="_blank">START</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>Housing Assistance</h3>
+      <p>Emergency and transitional housing.</p>
+      <a href="https://www.hud.gov/findshelter" target="_blank">GET HELP</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>Mental Health Support</h3>
+      <p>Counseling and crisis services.</p>
+      <a href="https://www.opencounseling.com" target="_blank">FIND SUPPORT</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>Legal Self-Help</h3>
+      <p>Free legal education resources.</p>
+      <a href="https://www.washingtonlawhelp.org" target="_blank">LEARN MORE</a>
+    </div>
+
     <div class="resource-card">
       <h3>Crisis Support</h3>
+      <p>24-hour confidential help line.</p>
       <a href="https://988lifeline.org" target="_blank">CALL 988</a>
     </div>
   </div>
