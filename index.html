@@ -29,7 +29,7 @@ body{
   line-height:1.85;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 header{
   background:
     linear-gradient(rgba(11,28,45,.9),rgba(11,28,45,.9)),
@@ -40,7 +40,7 @@ header{
 }
 
 header h1{
-  font-size:4.3rem;
+  font-size:4.2rem;
   letter-spacing:.08em;
   margin:0 0 1.2rem;
 }
@@ -52,7 +52,7 @@ header p{
 }
 
 .motto{
-  margin-top:1.8rem;
+  margin-top:1.6rem;
   font-size:1.05rem;
   letter-spacing:.18em;
   color:var(--gold);
@@ -60,9 +60,9 @@ header p{
   font-weight:600;
 }
 
-/* NAV */
+/* ===== NAV ===== */
 nav{
-  margin-top:3.5rem;
+  margin-top:3.2rem;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -94,18 +94,18 @@ nav{
   text-decoration:none;
 }
 
-/* SECTIONS */
+/* ===== SECTIONS ===== */
 section{
   max-width:1150px;
   margin:0 auto;
-  padding:6rem 1.5rem;
+  padding:5rem 1.5rem;
 }
 
 section h2{
   text-align:center;
   font-size:2.3rem;
   letter-spacing:.18em;
-  margin-bottom:1.5rem;
+  margin-bottom:1.3rem;
   color:var(--navy);
 }
 
@@ -114,10 +114,14 @@ section h2{
   font-size:1.25rem;
   color:var(--soft);
   max-width:900px;
-  margin:0 auto 4.5rem;
+  margin:0 auto 3.5rem;
 }
 
-/* PRACTICES */
+/* ===== PRACTICES ===== */
+#practices{
+  padding-bottom:2.5rem;
+}
+
 .practice-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -132,7 +136,11 @@ section h2{
   box-shadow:0 20px 45px rgba(0,0,0,.08);
 }
 
-/* ABOUT */
+/* ===== ABOUT ===== */
+#about{
+  padding-top:2.5rem;
+}
+
 .about-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -149,7 +157,7 @@ section h2{
   text-align:center;
 }
 
-/* RESOURCES */
+/* ===== RESOURCES ===== */
 #resources{
   background:#eef2f7;
 }
@@ -185,7 +193,7 @@ section h2{
   font-weight:600;
 }
 
-/* CONTACT */
+/* ===== CONTACT ===== */
 .contact-box{
   background:#e4ebf3;
   padding:5rem 2.5rem;
@@ -219,7 +227,7 @@ button{
   letter-spacing:.15em;
 }
 
-/* HOVERS */
+/* ===== HOVERS ===== */
 .practice-card,
 .about-card,
 .resource-card,
@@ -310,7 +318,15 @@ footer{
   <p class="section-sub">Support services available to clients and families.</p>
 
   <div class="resources-grid">
-    <!-- all 9 resource cards unchanged -->
+    <div class="resource-card"><h3>Food Banks</h3><p>Free food assistance.</p><a href="https://www.feedingamerica.org" target="_blank">FIND FOOD</a></div>
+    <div class="resource-card"><h3>Meditation</h3><p>Guided mindfulness.</p><a href="https://www.uclahealth.org/programs/marc/free-guided-meditations" target="_blank">START</a></div>
+    <div class="resource-card"><h3>Housing</h3><p>Emergency housing help.</p><a href="https://www.hud.gov/findshelter" target="_blank">GET HELP</a></div>
+    <div class="resource-card"><h3>Mental Health</h3><p>Counseling services.</p><a href="https://www.opencounseling.com" target="_blank">SUPPORT</a></div>
+    <div class="resource-card"><h3>Legal Self-Help</h3><p>Free legal info.</p><a href="https://www.washingtonlawhelp.org" target="_blank">LEARN</a></div>
+    <div class="resource-card"><h3>Crisis Line</h3><p>24-hour help.</p><a href="https://988lifeline.org" target="_blank">CALL 988</a></div>
+    <div class="resource-card"><h3>Domestic Violence</h3><p>Safety resources.</p><a href="https://www.thehotline.org" target="_blank">HELP</a></div>
+    <div class="resource-card"><h3>Reentry Support</h3><p>Post-incarceration help.</p><a href="https://nicic.gov" target="_blank">RESOURCES</a></div>
+    <div class="resource-card"><h3>WA DSHS</h3><p>State assistance programs.</p><a href="https://www.dshs.wa.gov" target="_blank">VISIT</a></div>
   </div>
 </section>
 
