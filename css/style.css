@@ -1,31 +1,35 @@
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
+/* ===== NAV FIX: CENTER RESOURCES BUTTON WITHOUT SHIFTING HEADER ===== */
+
+nav{
+  display:flex;
+  justify-content:center;
+  gap:2.5rem;
+  margin-top:3.5rem;
+  flex-wrap:wrap;
 }
 
-/* HEADER */
-.site-header {
-  background: yellow;
-  border-left: 12px solid purple;
-  padding: 2rem 1rem;
-  text-align: center;
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  letter-spacing:.15em;
+  font-size:.95rem;
 }
 
-.logo {
-  max-width: 280px;
-  width: 100%;
-  height: auto;
+/* gold resources button */
+.resources-btn{
+  background:var(--gold);
+  color:var(--navy-dark);
+  padding:.8rem 2.2rem;
+  border-radius:999px;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  margin:0;
 }
 
-/* MAIN CONTENT */
-.site-main {
-  padding: 2rem;
-  text-align: center;
-}
-
-.updates-text {
-  color: purple;
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 0.05em;
+/* force button onto its own centered row */
+nav .resources-btn{
+  flex-basis:100%;
+  margin-top:2.2rem;
 }
