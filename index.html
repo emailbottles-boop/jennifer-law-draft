@@ -27,7 +27,7 @@ body{
   background:var(--bg);
   color:var(--text);
   font-size:18px;
-  line-height:1.8;
+  line-height:1.85;
 }
 
 /* ===== HEADER ===== */
@@ -41,25 +41,24 @@ header{
 }
 
 header h1{
-  font-size:5.2rem;
+  font-size:4.8rem;
   letter-spacing:.08em;
-  margin-bottom:1rem;
+  margin-bottom:1.2rem;
 }
 
 header p{
-  font-size:1.35rem;
+  font-size:1.25rem;
   max-width:900px;
   margin:0 auto;
 }
 
 .motto{
   margin-top:2rem;
-  font-size:1.2rem;
+  font-size:1.15rem;
   letter-spacing:.18em;
   color:var(--gold);
   text-transform:uppercase;
   font-weight:600;
-  white-space:nowrap;
 }
 
 /* ===== NAV ===== */
@@ -88,14 +87,14 @@ nav a{
 
 /* ===== SECTIONS ===== */
 section{
-  max-width:1200px;
+  max-width:1150px;
   margin:0 auto;
   padding:6rem 1.5rem;
 }
 
 section h2{
   text-align:center;
-  font-size:2.6rem;
+  font-size:2.4rem;
   letter-spacing:.18em;
   margin-bottom:1.5rem;
   color:var(--navy);
@@ -103,38 +102,28 @@ section h2{
 
 .section-sub{
   text-align:center;
-  font-size:1.35rem;
+  font-size:1.3rem;
   color:var(--soft);
   max-width:900px;
   margin:0 auto 4.5rem;
 }
 
-/* ===== PRACTICE BUBBLES ===== */
+/* ===== PRACTICE ===== */
 .practice-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:3rem;
 }
 
 .practice-card{
   background:var(--card);
-  padding:3.8rem 3.2rem;
-  border-radius:28px;
+  padding:3.5rem;
+  border-radius:26px;
   text-align:center;
   box-shadow:0 20px 45px rgba(0,0,0,.08);
 }
 
-.practice-card h3{
-  font-size:1.5rem;
-  margin-bottom:1rem;
-}
-
-.practice-card p{
-  font-size:1.25rem;
-  color:var(--soft);
-}
-
-/* ===== ABOUT BUBBLES ===== */
+/* ===== ABOUT ===== */
 .about-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -143,23 +132,14 @@ section h2{
 
 .about-card{
   background:var(--card);
-  padding:3.8rem;
-  border-radius:28px;
+  padding:3.5rem;
+  border-radius:26px;
   box-shadow:0 20px 45px rgba(0,0,0,.08);
-  text-align:center;
-}
-
-.about-card h3{
-  font-size:1.5rem;
-  margin-bottom:1rem;
-}
-
-.about-card p{
   font-size:1.3rem;
   color:var(--soft);
 }
 
-/* ===== RESOURCES ===== */
+/* ===== RESOURCES (SAFE) ===== */
 #resources{
   background:#eef2f7;
 }
@@ -173,16 +153,17 @@ section h2{
 .resource-card{
   background:white;
   padding:3.2rem;
-  border-radius:28px;
+  border-radius:26px;
   text-align:center;
   box-shadow:0 18px 40px rgba(0,0,0,.08);
 }
 
 .resource-card p{
-  font-size:1.25rem;
   color:var(--soft);
+  font-size:1.2rem;
 }
 
+/* CENTERED BUTTON – BULLETPROOF */
 .resource-card a{
   display:inline-flex;
   justify-content:center;
@@ -202,7 +183,7 @@ section h2{
 .contact-box{
   background:#e4ebf3;
   padding:5rem 2.5rem;
-  border-radius:32px;
+  border-radius:30px;
   text-align:center;
 }
 
@@ -258,51 +239,17 @@ footer{
 
 <section id="practice">
   <h2>PRACTICE AREAS</h2>
-  <p class="section-sub">Focused advocacy for individuals and families.</p>
-
-  <div class="practice-grid">
-    <div class="practice-card">
-      <h3>Criminal Defense</h3>
-      <p>Strong, ethical defense at every stage of the process.</p>
-    </div>
-
-    <div class="practice-card">
-      <h3>Public Defense</h3>
-      <p>Dedicated representation for those who need it most.</p>
-    </div>
-
-    <div class="practice-card">
-      <h3>Client Advocacy</h3>
-      <p>Clear communication and respect throughout your case.</p>
-    </div>
-  </div>
+  <p class="section-sub">Focused, ethical legal representation.</p>
 </section>
 
 <section id="about">
   <h2>ABOUT</h2>
-  <p class="section-sub">Professional experience rooted in compassion.</p>
-
-  <div class="about-grid">
-    <div class="about-card">
-      <h3>Experience</h3>
-      <p>Years of courtroom practice representing diverse clients.</p>
-    </div>
-
-    <div class="about-card">
-      <h3>Approach</h3>
-      <p>Client-centered, transparent, and prepared advocacy.</p>
-    </div>
-
-    <div class="about-card">
-      <h3>Commitment</h3>
-      <p>Dedicated to fairness, dignity, and justice.</p>
-    </div>
-  </div>
+  <p class="section-sub">Professional, compassionate advocacy.</p>
 </section>
 
 <section id="resources">
   <h2>COMMUNITY RESOURCES</h2>
-  <p class="section-sub">Additional support beyond legal representation.</p>
+  <p class="section-sub">Additional support services available to clients and families.</p>
 
   <div class="resources-grid">
     <div class="resource-card">
@@ -313,19 +260,31 @@ footer{
 
     <div class="resource-card">
       <h3>Free Meditation</h3>
-      <p>Guided mindfulness and stress relief.</p>
+      <p>Stress relief and guided mindfulness.</p>
       <a href="https://www.uclahealth.org/programs/marc/free-guided-meditations" target="_blank">START</a>
     </div>
 
     <div class="resource-card">
-      <h3>Housing Help</h3>
-      <p>Emergency and transitional housing support.</p>
+      <h3>Housing Assistance</h3>
+      <p>Emergency and transitional housing.</p>
       <a href="https://www.hud.gov/findshelter" target="_blank">GET HELP</a>
     </div>
 
     <div class="resource-card">
-      <h3>Mental Health</h3>
-      <p>Counseling and crisis support services.</p>
+      <h3>Mental Health Support</h3>
+      <p>Counseling and crisis services.</p>
+      <a href="https://www.opencounseling.com" target="_blank">FIND SUPPORT</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>Legal Self-Help</h3>
+      <p>Free legal education resources.</p>
+      <a href="https://www.washingtonlawhelp.org" target="_blank">LEARN MORE</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>Crisis Support</h3>
+      <p>24-hour confidential help line.</p>
       <a href="https://988lifeline.org" target="_blank">CALL 988</a>
     </div>
   </div>
