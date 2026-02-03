@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jennifer Stewart Law</title>
+
+  <style>
+    :root {
+      --navy-dark: #0b1c2d;
+      --navy-main: #132f4c;
+      --navy-soft: #3f6c8f;
+      --gold: #c8a44a;
+      --bg: #f5f7fa;
+      --card: #ffffff;
+      --text: #0b1c2d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: linear-gradient(135deg, var(--navy-dark), var(--navy-main));
+      color: white;
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.08em;
+    }
+
+    header p {
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    .motto {
+      margin-top: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      font-size: 0.75rem;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      font-size: 0.7rem;
+      opacity: 0.85;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 4.5rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 1.7rem;
+      letter-spacing: 0.2em;
+      color: var(--navy-main);
+    }
+
+    /* ===== PRACTICE AREAS ===== */
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .practice-card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 2rem;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+    }
+
+    .practice-card h3 {
+      margin-top: 0;
+      color: var(--navy-dark);
+    }
+
+    .practice-card p {
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+    }
+
+    .about p {
+      opacity: 0.9;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact {
+      text-align: center;
+      background: linear-gradient(135deg, #eef2f7, #e4ebf3);
+      border-radius: 26px;
+      padding: 4rem 2rem;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 2rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.9rem 1rem;
+      border-radius: 12px;
+      border: 1px solid #ccd6e0;
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.9rem 2rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--navy-main);
+      color: white;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: var(--navy-dark);
+    }
+
+    .disclaimer {
+      font-size: 0.7rem;
+      opacity: 0.6;
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.7rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>JENNIFER STEWART LAW</h1>
+  <p>Dedicated legal representation focused on fairness, integrity, and results.</p>
+  <div class="motto">Public Defence You Can Trust</div>
+
+  <nav>
+    <a href="#practice">PRACTICE</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
+
+<section id="practice">
+  <h2>PRACTICE AREAS</h2>
+
+  <div class="practice-grid">
+    <div class="practice-card">
+      <h3>Criminal Defense</h3>
+      <p>Strategic defense for misdemeanor and felony charges.</p>
+    </div>
+
+    <div class="practice-card">
+      <h3>Public Defense</h3>
+      <p>Ensuring constitutional rights and fair representation for every client.</p>
+    </div>
+
+    <div class="practice-card">
+      <h3>Legal Consultation</h3>
+      <p>Clear, honest guidance to help you understand your options.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>ABOUT</h2>
+
+  <div class="about">
+    <p>
+      Jennifer Stewart is a dedicated public defense attorney committed to protecting
+      individual rights and ensuring justice remains accessible.
+    </p>
+
+    <p>
+      Every case is handled with preparation, discretion, and respect for the law.
+      Clients receive transparency, professionalism, and strong advocacy.
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>CONTACT</h2>
+
+  <div class="contact">
+    <h3>Schedule a Consultation</h3>
+    <p>
+      Reach out to discuss your case. Confidential and judgment-free.
+    </p>
+
+    <form action="https://formspree.io/f/mnjzwvzl" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Briefly describe your situation" required></textarea>
+      <button type="submit">GET IN TOUCH</button>
+    </form>
+
+    <p class="disclaimer">
+      Submitting this form does not create an attorney-client relationship.
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Jennifer Stewart Law — All Rights Reserved
+</footer>
+
+</body>
+</html>
