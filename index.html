@@ -19,7 +19,6 @@
 }
 
 *{box-sizing:border-box}
-
 html{scroll-behavior:smooth}
 
 body{
@@ -124,9 +123,6 @@ section h2{
   box-shadow:0 20px 45px rgba(0,0,0,.08);
 }
 
-.practice-card h3{font-size:1.6rem}
-.practice-card p{font-size:1.25rem;color:var(--soft)}
-
 /* ===== ABOUT ===== */
 .about-grid{
   display:grid;
@@ -143,7 +139,7 @@ section h2{
   color:var(--soft);
 }
 
-/* ===== RESOURCES (STABLE) ===== */
+/* ===== RESOURCES (SAFE) ===== */
 #resources{
   background:#eef2f7;
 }
@@ -162,11 +158,16 @@ section h2{
   box-shadow:0 18px 40px rgba(0,0,0,.08);
 }
 
-.resource-card h3{font-size:1.45rem}
-.resource-card p{font-size:1.2rem;color:var(--soft)}
+.resource-card p{
+  color:var(--soft);
+  font-size:1.2rem;
+}
 
-.resource-btn{
-  display:inline-block;
+/* CENTERED BUTTON – BULLETPROOF */
+.resource-card a{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
   margin-top:2rem;
   padding:.9rem 2.4rem;
   border-radius:999px;
@@ -239,71 +240,58 @@ footer{
 <section id="practice">
   <h2>PRACTICE AREAS</h2>
   <p class="section-sub">Focused, ethical legal representation.</p>
-
-  <div class="practice-grid">
-    <div class="practice-card">
-      <h3>Criminal Defense</h3>
-      <p>Misdemeanor and felony advocacy.</p>
-    </div>
-    <div class="practice-card">
-      <h3>Public Defense</h3>
-      <p>Protection of constitutional rights.</p>
-    </div>
-    <div class="practice-card">
-      <h3>Legal Consultation</h3>
-      <p>Clear and honest guidance.</p>
-    </div>
-  </div>
 </section>
 
 <section id="about">
   <h2>ABOUT</h2>
-  <p class="section-sub">Professional, compassionate, and client-focused.</p>
-
-  <div class="about-grid">
-    <div class="about-card">
-      Jennifer Stewart is a public defense attorney committed to fairness and dignity.
-    </div>
-    <div class="about-card">
-      Every case is handled with preparation, transparency, and respect.
-    </div>
-  </div>
+  <p class="section-sub">Professional, compassionate advocacy.</p>
 </section>
 
 <section id="resources">
   <h2>COMMUNITY RESOURCES</h2>
-  <p class="section-sub">Support services available to individuals and families.</p>
+  <p class="section-sub">Additional support services available to clients and families.</p>
 
   <div class="resources-grid">
     <div class="resource-card">
       <h3>Food Banks</h3>
-      <p>Free food assistance nationwide.</p>
-      <a class="resource-btn" href="https://www.feedingamerica.org" target="_blank">FIND FOOD</a>
+      <p>Free food assistance and meal programs.</p>
+      <a href="https://www.feedingamerica.org" target="_blank">FIND FOOD</a>
     </div>
 
     <div class="resource-card">
       <h3>Free Meditation</h3>
-      <p>Guided meditation and stress relief.</p>
-      <a class="resource-btn" href="https://www.uclahealth.org/programs/marc/free-guided-meditations" target="_blank">START</a>
+      <p>Stress relief and guided mindfulness.</p>
+      <a href="https://www.uclahealth.org/programs/marc/free-guided-meditations" target="_blank">START</a>
     </div>
 
     <div class="resource-card">
       <h3>Housing Assistance</h3>
-      <p>Emergency shelter and housing help.</p>
-      <a class="resource-btn" href="https://www.hud.gov/findshelter" target="_blank">GET HELP</a>
+      <p>Emergency and transitional housing.</p>
+      <a href="https://www.hud.gov/findshelter" target="_blank">GET HELP</a>
     </div>
 
     <div class="resource-card">
-      <h3>Legal Help</h3>
+      <h3>Mental Health Support</h3>
+      <p>Counseling and crisis services.</p>
+      <a href="https://www.opencounseling.com" target="_blank">FIND SUPPORT</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>Legal Self-Help</h3>
       <p>Free legal education resources.</p>
-      <a class="resource-btn" href="https://www.washingtonlawhelp.org" target="_blank">LEARN MORE</a>
+      <a href="https://www.washingtonlawhelp.org" target="_blank">LEARN MORE</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>Crisis Support</h3>
+      <p>24-hour confidential help line.</p>
+      <a href="https://988lifeline.org" target="_blank">CALL 988</a>
     </div>
   </div>
 </section>
 
 <section id="contact">
   <h2>CONTACT</h2>
-
   <div class="contact-box">
     <form action="https://formspree.io/f/mnjzwvzl" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
