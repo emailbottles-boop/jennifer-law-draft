@@ -36,7 +36,7 @@ header{
     url("legalbooks.jpeg") center/cover no-repeat;
   color:white;
   text-align:center;
-  padding:7rem 1.5rem 5.5rem;
+  padding:6.5rem 1.5rem 5rem;
 }
 
 header h1{
@@ -52,7 +52,7 @@ header p{
 }
 
 .motto{
-  margin-top:1.6rem;
+  margin-top:1.4rem;
   font-size:1.05rem;
   letter-spacing:.18em;
   color:var(--gold);
@@ -62,7 +62,7 @@ header p{
 
 /* ===== NAV ===== */
 nav{
-  margin-top:3.2rem;
+  margin-top:3rem;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -94,18 +94,18 @@ nav{
   text-decoration:none;
 }
 
-/* ===== SECTIONS ===== */
+/* ===== SECTION BASE ===== */
 section{
   max-width:1150px;
   margin:0 auto;
-  padding:5rem 1.5rem;
+  padding:4.5rem 1.5rem;
 }
 
 section h2{
   text-align:center;
   font-size:2.3rem;
   letter-spacing:.18em;
-  margin-bottom:1.3rem;
+  margin-bottom:1.2rem;
   color:var(--navy);
 }
 
@@ -114,12 +114,12 @@ section h2{
   font-size:1.25rem;
   color:var(--soft);
   max-width:900px;
-  margin:0 auto 3.5rem;
+  margin:0 auto 3rem;
 }
 
 /* ===== PRACTICES ===== */
 #practices{
-  padding-bottom:2.5rem;
+  padding-bottom:2rem; /* tightened */
 }
 
 .practice-grid{
@@ -130,7 +130,7 @@ section h2{
 
 .practice-card{
   background:var(--card);
-  padding:3.5rem;
+  padding:3.2rem;
   border-radius:26px;
   text-align:center;
   box-shadow:0 20px 45px rgba(0,0,0,.08);
@@ -138,7 +138,7 @@ section h2{
 
 /* ===== ABOUT ===== */
 #about{
-  padding-top:2.5rem;
+  padding-top:2rem; /* tightened */
 }
 
 .about-grid{
@@ -149,7 +149,7 @@ section h2{
 
 .about-card{
   background:var(--card);
-  padding:3.5rem;
+  padding:3.2rem;
   border-radius:26px;
   box-shadow:0 20px 45px rgba(0,0,0,.08);
   font-size:1.25rem;
@@ -170,7 +170,7 @@ section h2{
 
 .resource-card{
   background:white;
-  padding:3.2rem;
+  padding:3.1rem;
   border-radius:26px;
   text-align:center;
   box-shadow:0 18px 40px rgba(0,0,0,.08);
@@ -196,7 +196,7 @@ section h2{
 /* ===== CONTACT ===== */
 .contact-box{
   background:#e4ebf3;
-  padding:5rem 2.5rem;
+  padding:4.5rem 2.5rem;
   border-radius:30px;
   text-align:center;
 }
@@ -282,18 +282,9 @@ footer{
   <p class="section-sub">Focused, ethical legal representation.</p>
 
   <div class="practice-grid">
-    <div class="practice-card">
-      <h3>Criminal Defense</h3>
-      <p>Misdemeanor and felony representation.</p>
-    </div>
-    <div class="practice-card">
-      <h3>Public Defense</h3>
-      <p>Protecting constitutional rights.</p>
-    </div>
-    <div class="practice-card">
-      <h3>Legal Consultation</h3>
-      <p>Clear guidance and case evaluation.</p>
-    </div>
+    <div class="practice-card"><h3>Criminal Defense</h3><p>Misdemeanor and felony representation.</p></div>
+    <div class="practice-card"><h3>Public Defense</h3><p>Protecting constitutional rights.</p></div>
+    <div class="practice-card"><h3>Legal Consultation</h3><p>Clear guidance and case evaluation.</p></div>
   </div>
 </section>
 
@@ -302,14 +293,8 @@ footer{
   <p class="section-sub">Professional, compassionate advocacy.</p>
 
   <div class="about-grid">
-    <div class="about-card">
-      Jennifer Stewart is a public defense attorney dedicated to justice,
-      dignity, and equitable legal representation.
-    </div>
-    <div class="about-card">
-      Every case is approached with preparation, discretion,
-      and respect for the people involved.
-    </div>
+    <div class="about-card">Jennifer Stewart is a public defense attorney dedicated to justice, dignity, and equitable legal representation.</div>
+    <div class="about-card">Every case is approached with preparation, discretion, and respect for the people involved.</div>
   </div>
 </section>
 
@@ -322,11 +307,11 @@ footer{
     <div class="resource-card"><h3>Meditation</h3><p>Guided mindfulness.</p><a href="https://www.uclahealth.org/programs/marc/free-guided-meditations" target="_blank">START</a></div>
     <div class="resource-card"><h3>Housing</h3><p>Emergency housing help.</p><a href="https://www.hud.gov/findshelter" target="_blank">GET HELP</a></div>
     <div class="resource-card"><h3>Mental Health</h3><p>Counseling services.</p><a href="https://www.opencounseling.com" target="_blank">SUPPORT</a></div>
-    <div class="resource-card"><h3>Legal Self-Help</h3><p>Free legal info.</p><a href="https://www.washingtonlawhelp.org" target="_blank">LEARN</a></div>
-    <div class="resource-card"><h3>Crisis Line</h3><p>24-hour help.</p><a href="https://988lifeline.org" target="_blank">CALL 988</a></div>
-    <div class="resource-card"><h3>Domestic Violence</h3><p>Safety resources.</p><a href="https://www.thehotline.org" target="_blank">HELP</a></div>
-    <div class="resource-card"><h3>Reentry Support</h3><p>Post-incarceration help.</p><a href="https://nicic.gov" target="_blank">RESOURCES</a></div>
-    <div class="resource-card"><h3>WA DSHS</h3><p>State assistance programs.</p><a href="https://www.dshs.wa.gov" target="_blank">VISIT</a></div>
+    <div class="resource-card"><h3>Legal Self-Help</h3><p>Free legal information.</p><a href="https://www.washingtonlawhelp.org" target="_blank">LEARN</a></div>
+    <div class="resource-card"><h3>Crisis Line</h3><p>24-hour confidential help.</p><a href="https://988lifeline.org" target="_blank">CALL 988</a></div>
+    <div class="resource-card"><h3>Domestic Violence</h3><p>Immediate safety resources.</p><a href="https://www.thehotline.org" target="_blank">HELP</a></div>
+    <div class="resource-card"><h3>Reentry Support</h3><p>Post-incarceration assistance.</p><a href="https://nicic.gov" target="_blank">RESOURCES</a></div>
+    <div class="resource-card"><h3>WA DSHS</h3><p>State food, cash, and medical aid.</p><a href="https://www.dshs.wa.gov" target="_blank">VISIT</a></div>
   </div>
 </section>
 
