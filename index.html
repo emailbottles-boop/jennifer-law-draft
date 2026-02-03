@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root {
+:root{
   --navy-dark:#0b1c2d;
   --navy-main:#132f4c;
   --gold:#c8a44a;
@@ -18,219 +18,204 @@
   --text-soft:#445566;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 
-body {
-  margin: 0;
-  font-family: "Inter", system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  font-size: 18px;
-  line-height: 1.85;
+body{
+  margin:0;
+  font-family:Inter,system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  font-size:19px;
+  line-height:1.9;
 }
 
 /* ===== HEADER ===== */
-header {
-  background:
-    linear-gradient(rgba(11,28,45,.9), rgba(11,28,45,.9)),
-    url("legalbooks.jpeg") center / cover no-repeat;
-  color: white;
-  padding: 7.5rem 1.5rem 6.5rem;
-  text-align: center;
+header{
+  background:linear-gradient(rgba(11,28,45,.9),rgba(11,28,45,.9)),
+  url("legalbooks.jpeg") center/cover no-repeat;
+  color:white;
+  text-align:center;
+  padding:8rem 1.5rem 6.5rem;
 }
 
-header h1 {
-  font-size: clamp(3.6rem, 6vw, 4.8rem);
-  font-weight: 700;
-  letter-spacing: .06em;
-  margin-bottom: 1.5rem;
+header h1{
+  font-size:clamp(3.8rem,6vw,5rem);
+  letter-spacing:.08em;
+  margin-bottom:1.6rem;
 }
 
-header p {
-  max-width: 780px;
-  margin: 0 auto;
-  font-size: 1.4rem;
+header p{
+  max-width:820px;
+  margin:0 auto;
+  font-size:1.45rem;
 }
 
-.motto {
-  margin-top: 2.6rem;
-  font-size: 1.2rem;
-  letter-spacing: .18em;
-  color: var(--gold);
-  font-weight: 600;
-  text-transform: uppercase;
+.motto{
+  margin-top:2.8rem;
+  font-size:1.25rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:600;
 }
 
 /* ===== NAV ===== */
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2.8rem;
-  margin-top: 4.2rem;
-  flex-wrap: wrap;
+nav{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:3rem;
+  margin-top:4.5rem;
+  flex-wrap:wrap;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  letter-spacing: .15em;
-  font-weight: 600;
-  opacity: .9;
+nav a{
+  color:white;
+  text-decoration:none;
+  font-size:1.05rem;
+  letter-spacing:.15em;
+  font-weight:600;
 }
 
-nav a:hover { opacity: 1; }
-
-.resources-btn {
-  background: var(--gold);
-  color: var(--navy-dark);
-  padding: .9rem 2.2rem;
-  border-radius: 999px;
-  font-weight: 700;
+.resources-btn{
+  background:var(--gold);
+  color:var(--navy-dark);
+  padding:.9rem 2.4rem;
+  border-radius:999px;
 }
 
 /* ===== SECTIONS ===== */
-section {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 6.8rem 1.5rem;
+section{
+  max-width:1150px;
+  margin:0 auto;
+  padding:7rem 1.5rem;
 }
 
-section h2 {
-  text-align: center;
-  font-size: 2.3rem;
-  letter-spacing: .18em;
-  margin-bottom: 1.4rem;
-  color: var(--navy-main);
+section h2{
+  text-align:center;
+  font-size:2.5rem;
+  letter-spacing:.2em;
+  margin-bottom:1.6rem;
+  color:var(--navy-main);
 }
 
-.section-sub {
-  text-align: center;
-  max-width: 840px;
-  margin: 0 auto 4.6rem;
-  font-size: 1.35rem;
-  color: var(--text-soft);
+.section-sub{
+  text-align:center;
+  max-width:880px;
+  margin:0 auto 5rem;
+  font-size:1.45rem;
+  color:var(--text-soft);
 }
 
 /* ===== PRACTICE ===== */
-.practice-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 2.8rem;
+.practice-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:3rem;
 }
 
-.practice-card {
-  background: var(--card);
-  border-radius: 26px;
-  padding: 3.4rem;
-  text-align: center;
-  box-shadow: 0 20px 45px rgba(0,0,0,.08);
+.practice-card{
+  background:var(--card);
+  padding:3.6rem;
+  border-radius:28px;
+  text-align:center;
+  box-shadow:0 20px 45px rgba(0,0,0,.08);
 }
 
-.practice-card h3 {
-  margin-top: 0;
-  font-size: 1.6rem;
-}
-
-.practice-card p {
-  font-size: 1.3rem;
-  color: var(--text-soft);
-}
+.practice-card h3{font-size:1.7rem}
+.practice-card p{font-size:1.35rem;color:var(--text-soft)}
 
 /* ===== ABOUT ===== */
-.about-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
-  gap: 3.2rem;
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:3.4rem;
 }
 
-.about-card {
-  background: var(--card);
-  border-radius: 26px;
-  padding: 3.4rem;
-  box-shadow: 0 20px 45px rgba(0,0,0,.08);
-  font-size: 1.35rem;
-  color: var(--text-soft);
+.about-card{
+  background:var(--card);
+  padding:3.6rem;
+  border-radius:28px;
+  box-shadow:0 20px 45px rgba(0,0,0,.08);
+  font-size:1.4rem;
+  color:var(--text-soft);
 }
 
 /* ===== RESOURCES ===== */
-.resources-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 2.8rem;
+.resources-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:3rem;
 }
 
-.resource-card {
-  background: var(--card);
-  border-radius: 26px;
-  padding: 3.4rem;
-  text-align: center;
-  box-shadow: 0 20px 45px rgba(0,0,0,.08);
+.resource-card{
+  background:var(--card);
+  padding:3.6rem;
+  border-radius:28px;
+  text-align:center;
+  box-shadow:0 20px 45px rgba(0,0,0,.08);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
 }
 
-.resource-card h3 {
-  font-size: 1.5rem;
-}
+.resource-card h3{font-size:1.6rem}
+.resource-card p{font-size:1.3rem;color:var(--text-soft)}
 
-.resource-card p {
-  font-size: 1.25rem;
-  color: var(--text-soft);
-}
-
-.resource-card a {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 1rem 2.4rem;
-  border-radius: 999px;
-  background: var(--navy-main);
-  color: white;
-  font-size: .95rem;
-  letter-spacing: .15em;
-  text-decoration: none;
+.resource-btn{
+  margin-top:2.2rem;
+  align-self:center;
+  padding:1rem 2.6rem;
+  border-radius:999px;
+  background:var(--navy-main);
+  color:white;
+  text-decoration:none;
+  font-size:1rem;
+  letter-spacing:.15em;
+  font-weight:600;
 }
 
 /* ===== CONTACT ===== */
-.contact-box {
-  background: linear-gradient(135deg,#eef2f7,#e4ebf3);
-  border-radius: 30px;
-  padding: 4.8rem 2.5rem;
-  text-align: center;
+.contact-box{
+  background:linear-gradient(135deg,#eef2f7,#e4ebf3);
+  padding:5rem 2.5rem;
+  border-radius:32px;
+  text-align:center;
 }
 
-form {
-  max-width: 520px;
-  margin: 2.6rem auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
+form{
+  max-width:540px;
+  margin:3rem auto 0;
+  display:flex;
+  flex-direction:column;
+  gap:1.6rem;
 }
 
-input, textarea {
-  padding: 1.15rem;
-  border-radius: 14px;
-  border: 1px solid #ccd6e0;
-  font-size: 1rem;
+input,textarea{
+  padding:1.2rem;
+  border-radius:14px;
+  border:1px solid #ccd6e0;
+  font-size:1.05rem;
 }
 
-button {
-  margin-top: 1.6rem;
-  padding: 1.15rem 2.8rem;
-  border-radius: 999px;
-  border: none;
-  background: var(--navy-main);
-  color: white;
-  font-weight: 600;
-  letter-spacing: .15em;
-  cursor: pointer;
+button{
+  margin-top:1.8rem;
+  padding:1.2rem 3rem;
+  border:none;
+  border-radius:999px;
+  background:var(--navy-main);
+  color:white;
+  font-weight:600;
+  letter-spacing:.15em;
+  cursor:pointer;
 }
 
-footer {
-  text-align: center;
-  padding: 3rem 1rem;
-  font-size: .9rem;
-  opacity: .65;
+footer{
+  text-align:center;
+  padding:3rem 1rem;
+  font-size:.95rem;
+  opacity:.65;
 }
 </style>
 </head>
@@ -239,8 +224,8 @@ footer {
 
 <header>
   <h1>JENNIFER STEWART LAW</h1>
-  <p>Dedicated legal representation focused on fairness, integrity, and results.</p>
-  <div class="motto">Public Defence You Can Trust</div>
+  <p>Dedicated public defense representation grounded in fairness, dignity, and results.</p>
+  <div class="motto">Public Defense You Can Trust</div>
 
   <nav>
     <a href="#practice">PRACTICE</a>
@@ -252,79 +237,86 @@ footer {
 
 <section id="practice">
   <h2>PRACTICE AREAS</h2>
-  <p class="section-sub">Clear, compassionate representation focused on your rights.</p>
+  <p class="section-sub">Clear advocacy with compassion and professionalism.</p>
 
   <div class="practice-grid">
     <div class="practice-card">
       <h3>Criminal Defense</h3>
-      <p>Strategic representation for misdemeanor and felony charges.</p>
+      <p>Misdemeanor and felony defense focused on protecting your rights.</p>
     </div>
     <div class="practice-card">
       <h3>Public Defense</h3>
-      <p>Ensuring constitutional protections and fair treatment.</p>
+      <p>Ensuring fairness and constitutional protections for every client.</p>
     </div>
     <div class="practice-card">
       <h3>Legal Consultation</h3>
-      <p>Clear guidance so you understand your options.</p>
+      <p>Straightforward guidance so you understand your options.</p>
     </div>
   </div>
 </section>
 
 <section id="about">
   <h2>ABOUT</h2>
-  <p class="section-sub">Professional advocacy grounded in integrity and respect.</p>
+  <p class="section-sub">Experience, integrity, and respect at every stage.</p>
 
   <div class="about-grid">
     <div class="about-card">
-      Jennifer Stewart is a public defense attorney dedicated to protecting individual
-      rights and ensuring justice remains accessible.
+      Jennifer Stewart is committed to providing thoughtful and prepared public defense
+      representation with dignity and care.
     </div>
     <div class="about-card">
-      Each case is approached with preparation, discretion, and professionalism.
+      Every case is approached with discretion, preparation, and respect for the individual.
     </div>
   </div>
 </section>
 
 <section id="resources">
   <h2>COMMUNITY RESOURCES</h2>
-  <p class="section-sub">Support services for stability, wellness, and essential needs.</p>
+  <p class="section-sub">Support for food, wellness, housing, and legal stability.</p>
 
   <div class="resources-grid">
-    <div class="resource-card">
-      <h3>Washington DSHS</h3>
-      <p>Food, cash, medical, and housing assistance.</p>
-      <a href="https://www.dshs.wa.gov" target="_blank">VISIT</a>
-    </div>
 
     <div class="resource-card">
       <h3>Food Banks</h3>
-      <p>Find local food assistance programs.</p>
-      <a href="https://www.feedingamerica.org" target="_blank">FIND FOOD</a>
+      <p>Locate free food assistance and local food banks nationwide.</p>
+      <a class="resource-btn" href="https://www.feedingamerica.org" target="_blank">FIND FOOD</a>
     </div>
 
     <div class="resource-card">
-      <h3>Meditation & Wellness</h3>
-      <p>Free guided meditation and stress relief resources.</p>
-      <a href="https://www.uclahealth.org/programs/marc/free-guided-meditations" target="_blank">RELAX</a>
+      <h3>Local Food Assistance (WA)</h3>
+      <p>Washington State food programs and SNAP resources.</p>
+      <a class="resource-btn" href="https://www.dshs.wa.gov/esa/community-services-offices" target="_blank">LEARN MORE</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>Free Meditation</h3>
+      <p>Guided meditations for stress, anxiety, and emotional grounding.</p>
+      <a class="resource-btn" href="https://www.uclahealth.org/programs/marc/free-guided-meditations" target="_blank">BEGIN</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>Mental Health Support</h3>
+      <p>Free and low-cost mental health and crisis resources.</p>
+      <a class="resource-btn" href="https://www.nami.org/help" target="_blank">GET SUPPORT</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>Housing Assistance</h3>
+      <p>Emergency housing, rent help, and stability resources.</p>
+      <a class="resource-btn" href="https://www.hud.gov/findshelter" target="_blank">FIND HELP</a>
     </div>
 
     <div class="resource-card">
       <h3>Legal Self-Help</h3>
       <p>Free legal information and self-help tools.</p>
-      <a href="https://www.washingtonlawhelp.org" target="_blank">GET HELP</a>
+      <a class="resource-btn" href="https://www.washingtonlawhelp.org" target="_blank">ACCESS</a>
     </div>
 
-    <div class="resource-card">
-      <h3>Crisis Connections</h3>
-      <p>24-hour crisis and emotional support line.</p>
-      <a href="https://www.crisisconnections.org" target="_blank">SUPPORT</a>
-    </div>
   </div>
 </section>
 
 <section id="contact">
   <h2>CONTACT</h2>
-
   <div class="contact-box">
     <form action="https://formspree.io/f/mnjzwvzl" method="POST">
       <input name="name" placeholder="Your Name" required>
