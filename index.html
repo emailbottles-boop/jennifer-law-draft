@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jennifer Stewart Law</title>
 
-  <!-- Single modern font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,8 +22,6 @@
 
     * { box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
       font-family: "Inter", system-ui, sans-serif;
@@ -32,7 +29,6 @@
       color: var(--text);
       line-height: 1.75;
       font-size: 16px;
-      -webkit-font-smoothing: antialiased;
     }
 
     /* ===== HEADER ===== */
@@ -57,7 +53,6 @@
       margin: 0 auto;
       font-size: 1.05rem;
       opacity: 0.95;
-      font-weight: 400;
     }
 
     .motto {
@@ -86,16 +81,12 @@
       opacity: 0.85;
     }
 
-    nav a:hover { opacity: 1; }
-
     .resources-btn {
       background: var(--gold);
       color: var(--navy-dark);
       padding: 0.6rem 1.3rem;
       border-radius: 999px;
-      font-size: 0.7rem;
       font-weight: 700;
-      letter-spacing: 0.16em;
     }
 
     /* ===== SECTIONS ===== */
@@ -124,11 +115,14 @@
     .practice-card {
       background: var(--card);
       border-radius: 18px;
-      padding: 2.4rem;
+      padding: 2.8rem 2rem;
       box-shadow: 0 16px 38px rgba(0,0,0,0.07);
-      font-size: 1rem;
-      font-weight: 500;
       color: var(--text-soft);
+
+      /* CENTER TEXT ONLY */
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.05rem;
     }
 
     /* ===== ABOUT ===== */
@@ -143,9 +137,11 @@
       border-radius: 20px;
       padding: 2.6rem;
       box-shadow: 0 14px 34px rgba(0,0,0,0.07);
-      font-size: 1.02rem;
-      font-weight: 400;
       color: var(--text-soft);
+
+      /* CENTER TEXT, KEEP GRID */
+      text-align: center;
+      font-size: 1.02rem;
     }
 
     /* ===== RESOURCES ===== */
@@ -159,8 +155,10 @@
       background: var(--card);
       border-radius: 20px;
       padding: 2.6rem;
-      text-align: center;
       box-shadow: 0 16px 38px rgba(0,0,0,0.07);
+
+      /* CENTER CONTENT */
+      text-align: center;
     }
 
     .resource-card h3 {
@@ -168,12 +166,10 @@
       font-size: 1.15rem;
       font-weight: 700;
       color: var(--navy-dark);
-      letter-spacing: 0.02em;
     }
 
     .resource-card p {
       font-size: 0.95rem;
-      font-weight: 400;
       color: var(--text-soft);
       line-height: 1.7;
     }
