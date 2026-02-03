@@ -130,11 +130,6 @@ section h2{
   box-shadow:0 28px 60px rgba(0,0,0,.12);
 }
 
-.practice-card h3{
-  margin-bottom:1rem;
-  color:var(--navy);
-}
-
 /* ===== ABOUT ===== */
 .about-grid{
   display:grid;
@@ -148,15 +143,12 @@ section h2{
   padding:3.5rem;
   border-radius:26px;
   box-shadow:0 20px 45px rgba(0,0,0,.08);
-  color:var(--soft);
   font-size:1.25rem;
-
-  /* CENTER CONTENT */
+  color:var(--soft);
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-
   transition:transform .35s ease, box-shadow .35s ease;
 }
 
@@ -191,23 +183,14 @@ section h2{
   box-shadow:0 28px 60px rgba(0,0,0,.12);
 }
 
-.resource-card p{
-  color:var(--soft);
-  font-size:1.2rem;
-}
-
 .resource-card a{
   display:inline-flex;
-  justify-content:center;
-  align-items:center;
   margin-top:2rem;
   padding:.9rem 2.4rem;
   border-radius:999px;
   background:var(--navy);
   color:white;
   text-decoration:none;
-  font-size:.95rem;
-  letter-spacing:.15em;
   font-weight:600;
   transition:transform .25s ease, box-shadow .25s ease;
 }
@@ -237,7 +220,6 @@ input,textarea{
   padding:1.1rem;
   border-radius:14px;
   border:1px solid #ccd6e0;
-  font-size:1rem;
 }
 
 button{
@@ -253,13 +235,11 @@ button{
   transition:transform .25s ease, box-shadow .25s ease;
 }
 
-button:hover,
-.resources-btn:hover{
+button:hover{
   transform:translateY(-2px);
   box-shadow:0 12px 30px rgba(0,0,0,.18);
 }
 
-/* ===== FOOTER ===== */
 footer{
   text-align:center;
   padding:2.5rem 1rem;
@@ -286,31 +266,18 @@ footer{
 
 <section id="practice">
   <h2>PRACTICE AREAS</h2>
-  <p class="section-sub">
-    Focused legal services delivered with clarity, discretion, and care.
-  </p>
+  <p class="section-sub">Focused legal services delivered with clarity and care.</p>
 
   <div class="practice-grid">
-    <div class="practice-card">
-      <h3>Criminal Defense</h3>
-      <p>Strong advocacy for misdemeanor and felony cases.</p>
-    </div>
-    <div class="practice-card">
-      <h3>Public Defense</h3>
-      <p>Protecting constitutional rights and due process.</p>
-    </div>
-    <div class="practice-card">
-      <h3>Legal Consultation</h3>
-      <p>Clear guidance to help you understand your options.</p>
-    </div>
+    <div class="practice-card">Criminal Defense</div>
+    <div class="practice-card">Public Defense</div>
+    <div class="practice-card">Legal Consultation</div>
   </div>
 </section>
 
 <section id="about">
   <h2>ABOUT</h2>
-  <p class="section-sub">
-    Professional, prepared, and committed to justice.
-  </p>
+  <p class="section-sub">Professional, prepared, and committed to justice.</p>
 
   <div class="about-grid">
     <div class="about-card">
@@ -321,6 +288,33 @@ footer{
       Every case is approached with preparation, discretion, and respect
       for the law and the people it serves.
     </div>
+  </div>
+</section>
+
+<section id="resources">
+  <h2>COMMUNITY RESOURCES</h2>
+
+  <div class="resources-grid">
+    <div class="resource-card">
+      <h3>Food Banks</h3>
+      <a href="https://www.feedingamerica.org" target="_blank">FIND FOOD</a>
+    </div>
+    <div class="resource-card">
+      <h3>Crisis Support</h3>
+      <a href="https://988lifeline.org" target="_blank">CALL 988</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>CONTACT</h2>
+  <div class="contact-box">
+    <form action="https://formspree.io/f/mnjzwvzl" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Briefly describe your situation" required></textarea>
+      <button type="submit">GET IN TOUCH</button>
+    </form>
   </div>
 </section>
 
