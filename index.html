@@ -28,11 +28,17 @@
       line-height: 1.65;
     }
 
-    /* ===== HEADER ===== */
+    /* ===== HEADER WITH IMAGE ===== */
     header {
-      background: linear-gradient(135deg, var(--navy-dark), var(--navy-main));
+      position: relative;
+      background:
+        linear-gradient(
+          rgba(11, 28, 45, 0.85),
+          rgba(11, 28, 45, 0.85)
+        ),
+        url("legalbooks.jpeg") center / cover no-repeat;
       color: white;
-      padding: 5rem 1.5rem 4rem;
+      padding: 5.5rem 1.5rem 4.5rem;
       text-align: center;
     }
 
@@ -43,15 +49,15 @@
     }
 
     header p {
-      max-width: 600px;
+      max-width: 620px;
       margin: 0 auto;
-      opacity: 0.9;
+      opacity: 0.95;
     }
 
     .motto {
-      margin-top: 1.5rem;
+      margin-top: 1.6rem;
       font-weight: 600;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.22em;
       font-size: 0.75rem;
       color: var(--gold);
       text-transform: uppercase;
@@ -90,7 +96,7 @@
       text-align: center;
       margin-bottom: 3rem;
       font-size: 1.7rem;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.22em;
       color: var(--navy-main);
     }
 
@@ -104,7 +110,7 @@
     .practice-card {
       background: var(--card);
       border-radius: 18px;
-      padding: 2rem;
+      padding: 2.2rem;
       box-shadow: 0 18px 40px rgba(0,0,0,0.08);
     }
 
@@ -146,7 +152,7 @@
     }
 
     input, textarea {
-      padding: 0.9rem 1rem;
+      padding: 0.95rem 1.1rem;
       border-radius: 12px;
       border: 1px solid #ccd6e0;
       font-family: inherit;
@@ -159,14 +165,14 @@
     }
 
     button {
-      margin-top: 1rem;
-      padding: 0.9rem 2rem;
+      margin-top: 1.2rem;
+      padding: 0.9rem 2.2rem;
       border-radius: 999px;
       border: none;
       background: var(--navy-main);
       color: white;
       font-weight: 600;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.18em;
       font-size: 0.75rem;
       cursor: pointer;
     }
@@ -178,7 +184,7 @@
     .disclaimer {
       font-size: 0.7rem;
       opacity: 0.6;
-      margin-top: 1rem;
+      margin-top: 1.2rem;
     }
 
     footer {
