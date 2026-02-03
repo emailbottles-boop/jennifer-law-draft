@@ -1,10 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jennifer Stewart Law</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -13,38 +17,39 @@
       --gold: #c8a44a;
       --bg: #f5f7fa;
       --card: #ffffff;
-      --text: #1a2633;
+      --text: #1f2d3a;
+      --text-soft: #4b5b6b;
     }
 
     * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: "Inter", system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.75;
+      line-height: 1.8;
       font-size: 16px;
+      -webkit-font-smoothing: antialiased;
     }
 
     /* ===== HEADER ===== */
     header {
       background:
-        linear-gradient(rgba(11,28,45,0.85), rgba(11,28,45,0.85)),
+        linear-gradient(rgba(11,28,45,0.88), rgba(11,28,45,0.88)),
         url("legalbooks.jpeg") center / cover no-repeat;
       color: white;
-      padding: 5.5rem 1.5rem 4.5rem;
+      padding: 5.8rem 1.5rem 4.8rem;
       text-align: center;
     }
 
     header h1 {
-      font-size: clamp(2.4rem, 5vw, 3.6rem);
-      margin-bottom: 0.6rem;
-      letter-spacing: 0.08em;
+      font-family: "Libre Baskerville", serif;
+      font-size: clamp(2.4rem, 5vw, 3.5rem);
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.06em;
     }
 
     header p {
@@ -55,10 +60,10 @@
     }
 
     .motto {
-      margin-top: 1.6rem;
+      margin-top: 1.8rem;
       font-weight: 600;
       letter-spacing: 0.22em;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: var(--gold);
       text-transform: uppercase;
     }
@@ -67,7 +72,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 1.8rem;
+      gap: 1.6rem;
       margin-top: 3rem;
       flex-wrap: wrap;
     }
@@ -75,37 +80,27 @@
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: 600;
-      letter-spacing: 0.18em;
+      font-weight: 500;
+      letter-spacing: 0.16em;
       font-size: 0.7rem;
       opacity: 0.85;
     }
 
-    nav a:hover {
-      opacity: 1;
-      text-decoration: underline;
-    }
+    nav a:hover { opacity: 1; }
 
     .resources-btn {
       background: var(--gold);
       color: var(--navy-dark);
-      padding: 0.6rem 1.2rem;
+      padding: 0.6rem 1.3rem;
       border-radius: 999px;
       font-size: 0.7rem;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: 0.18em;
-      text-decoration: none;
-      opacity: 1;
-    }
-
-    .resources-btn:hover {
-      background: #e0bb5b;
-      text-decoration: none;
     }
 
     /* ===== SECTIONS ===== */
     section {
-      padding: 4.5rem 1.5rem;
+      padding: 4.8rem 1.5rem;
       max-width: 1100px;
       margin: 0 auto;
     }
@@ -113,8 +108,9 @@
     section h2 {
       text-align: center;
       margin-bottom: 3rem;
+      font-family: "Libre Baskerville", serif;
       font-size: 1.7rem;
-      letter-spacing: 0.22em;
+      letter-spacing: 0.18em;
       color: var(--navy-main);
     }
 
@@ -127,9 +123,11 @@
 
     .practice-card {
       background: var(--card);
-      border-radius: 18px;
-      padding: 2.3rem;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+      border-radius: 20px;
+      padding: 2.4rem;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.07);
+      font-weight: 500;
+      color: var(--text-soft);
     }
 
     /* ===== ABOUT ===== */
@@ -141,9 +139,11 @@
 
     .about-card {
       background: var(--card);
-      border-radius: 20px;
-      padding: 2.5rem;
-      box-shadow: 0 16px 35px rgba(0,0,0,0.07);
+      border-radius: 22px;
+      padding: 2.6rem;
+      box-shadow: 0 14px 35px rgba(0,0,0,0.07);
+      font-size: 1.02rem;
+      color: var(--text-soft);
     }
 
     /* ===== RESOURCES ===== */
@@ -155,45 +155,47 @@
 
     .resource-card {
       background: var(--card);
-      border-radius: 20px;
-      padding: 2.5rem;
+      border-radius: 22px;
+      padding: 2.6rem;
       text-align: center;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.07);
     }
 
     .resource-card h3 {
+      font-family: "Libre Baskerville", serif;
       margin-top: 0;
       color: var(--navy-dark);
+      font-size: 1.2rem;
+    }
+
+    .resource-card p {
+      color: var(--text-soft);
     }
 
     .resource-card a {
       display: inline-block;
-      margin-top: 1.2rem;
+      margin-top: 1.3rem;
       padding: 0.8rem 1.6rem;
       border-radius: 999px;
       background: var(--navy-main);
       color: white;
       font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
+      font-weight: 500;
+      letter-spacing: 0.14em;
       text-decoration: none;
-    }
-
-    .resource-card a:hover {
-      background: var(--navy-dark);
     }
 
     /* ===== CONTACT ===== */
     .contact {
       text-align: center;
       background: linear-gradient(135deg, #eef2f7, #e4ebf3);
-      border-radius: 26px;
-      padding: 4rem 2rem;
+      border-radius: 28px;
+      padding: 4.2rem 2rem;
     }
 
     form {
-      max-width: 500px;
-      margin: 2.2rem auto 0;
+      max-width: 520px;
+      margin: 2.4rem auto 0;
       display: flex;
       flex-direction: column;
       gap: 1.1rem;
@@ -201,15 +203,15 @@
 
     input, textarea {
       padding: 1rem 1.1rem;
-      border-radius: 12px;
+      border-radius: 14px;
       border: 1px solid #ccd6e0;
       font-family: inherit;
       font-size: 0.95rem;
     }
 
     button {
-      margin-top: 1.2rem;
-      padding: 1rem 2.4rem;
+      margin-top: 1.4rem;
+      padding: 1rem 2.6rem;
       border-radius: 999px;
       border: none;
       background: var(--navy-main);
@@ -222,7 +224,7 @@
 
     footer {
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2.2rem 1rem;
       font-size: 0.75rem;
       opacity: 0.6;
     }
@@ -268,7 +270,6 @@
 
 <section id="resources">
   <h2>COMMUNITY RESOURCES</h2>
-
   <div class="resources-grid">
     <div class="resource-card">
       <h3>Washington DSHS</h3>
@@ -314,4 +315,3 @@
 
 </body>
 </html>
-
