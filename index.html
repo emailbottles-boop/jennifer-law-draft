@@ -163,16 +163,13 @@ section h2{
 
 .about-summary{text-align:center}
 
-/* 🔧 PHOTO FIX — NO BORDER, NO SHADOW */
 .about-photo img{
   width:140px;
-  height:auto;
   border-radius:12px;
   border:none;
   box-shadow:none;
 }
 
-/* BUTTON */
 .read-more-btn{
   margin-top:1.5rem;
   padding:.8rem 2rem;
@@ -232,6 +229,8 @@ section h2{
   flex-direction:column;
 }
 
+.resource-card p{color:var(--soft)}
+
 .resource-card a{
   margin-top:auto;
   padding:.9rem 2.4rem;
@@ -240,6 +239,7 @@ section h2{
   color:white;
   text-decoration:none;
   font-weight:600;
+  letter-spacing:.15em;
   transition:transform .2s ease;
 }
 
@@ -273,7 +273,6 @@ footer{
 <section id="practices">
   <h2>PRACTICES</h2>
   <p class="section-sub">Focused, ethical legal representation.</p>
-
   <div class="practice-grid">
     <div class="practice-card"><h3>Criminal Defense</h3><p>Misdemeanor and felony representation.</p></div>
     <div class="practice-card"><h3>Public Defense</h3><p>Protecting constitutional rights.</p></div>
@@ -316,9 +315,15 @@ footer{
   <p class="section-sub">Support services available to clients and families.</p>
 
   <div class="resources-grid">
-    <div class="resource-card"><h3>Food Banks</h3><a href="https://www.feedingamerica.org" target="_blank">FIND FOOD</a></div>
-    <div class="resource-card"><h3>Mental Health</h3><a href="https://www.opencounseling.com" target="_blank">SUPPORT</a></div>
-    <div class="resource-card"><h3>WA DSHS</h3><a href="https://www.dshs.wa.gov" target="_blank">VISIT</a></div>
+    <div class="resource-card"><h3>Food Banks</h3><p>Free food assistance.</p><a href="https://www.feedingamerica.org" target="_blank">FIND FOOD</a></div>
+    <div class="resource-card"><h3>Meditation</h3><p>Guided mindfulness.</p><a href="https://www.uclahealth.org/programs/marc/free-guided-meditations" target="_blank">START</a></div>
+    <div class="resource-card"><h3>Housing</h3><p>Emergency housing help.</p><a href="https://www.hud.gov/findshelter" target="_blank">GET HELP</a></div>
+    <div class="resource-card"><h3>Mental Health</h3><p>Counseling services.</p><a href="https://www.opencounseling.com" target="_blank">SUPPORT</a></div>
+    <div class="resource-card"><h3>Legal Self-Help</h3><p>Free legal information.</p><a href="https://www.washingtonlawhelp.org" target="_blank">LEARN</a></div>
+    <div class="resource-card"><h3>Crisis Line</h3><p>24-hour confidential help.</p><a href="https://988lifeline.org" target="_blank">CALL 988</a></div>
+    <div class="resource-card"><h3>Domestic Violence</h3><p>Immediate safety resources.</p><a href="https://www.thehotline.org" target="_blank">HELP</a></div>
+    <div class="resource-card"><h3>Reentry Support</h3><p>Post-incarceration assistance.</p><a href="https://nicic.gov" target="_blank">RESOURCES</a></div>
+    <div class="resource-card"><h3>WA DSHS</h3><p>State food, cash, and medical aid.</p><a href="https://www.dshs.wa.gov" target="_blank">VISIT</a></div>
   </div>
 </section>
 
