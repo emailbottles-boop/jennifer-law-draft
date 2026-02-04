@@ -117,10 +117,8 @@ section h2{
   margin:0 auto 3rem;
 }
 
-/* ===== PRACTICES (SPACING FIX) ===== */
-#practices{
-  padding-bottom:1.5rem;
-}
+/* ===== PRACTICES ===== */
+#practices{padding-bottom:1.5rem}
 
 .practice-grid{
   display:grid;
@@ -136,10 +134,8 @@ section h2{
   box-shadow:0 20px 45px rgba(0,0,0,.08);
 }
 
-/* ===== ABOUT (SPACING FIX) ===== */
-#about{
-  padding-top:1.5rem;
-}
+/* ===== ABOUT ===== */
+#about{padding-top:1.5rem}
 
 .about-grid{
   display:grid;
@@ -155,6 +151,15 @@ section h2{
   font-size:1.25rem;
   color:var(--soft);
   text-align:center;
+}
+
+/* 🔹 ADDED: about photo styling */
+.about-photo{
+  max-width:160px;
+  border-radius:18px;
+  margin:0 auto 2rem;
+  box-shadow:0 12px 30px rgba(0,0,0,.18);
+  display:block;
 }
 
 /* ===== RESOURCES ===== */
@@ -275,8 +280,14 @@ footer{
   <p class="section-sub">Professional, compassionate advocacy.</p>
 
   <div class="about-grid">
-    <div class="about-card">Jennifer Stewart is a public defense attorney dedicated to justice, dignity, and equitable legal representation.</div>
-    <div class="about-card">Every case is approached with preparation, discretion, and respect for the people involved.</div>
+    <div class="about-card">
+      <!-- 🔹 ADDED IMAGE -->
+      <img src="jennifer-stewart.jpg" alt="Jennifer Stewart" class="about-photo">
+      Jennifer Stewart is a public defense attorney dedicated to justice, dignity, and equitable legal representation.
+    </div>
+    <div class="about-card">
+      Every case is approached with preparation, discretion, and respect for the people involved.
+    </div>
   </div>
 </section>
 
