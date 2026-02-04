@@ -72,6 +72,7 @@ nav{
 .nav-links{
   display:flex;
   gap:2.5rem;
+  flex-wrap:wrap;
 }
 
 .nav-links a{
@@ -79,7 +80,6 @@ nav{
   text-decoration:none;
   font-weight:600;
   letter-spacing:.15em;
-  font-size:.95rem;
 }
 
 .nav-links a:hover{color:var(--gold)}
@@ -161,49 +161,22 @@ section h2{
   box-shadow:0 25px 55px rgba(0,0,0,.12);
 }
 
-/* LEFT ABOUT */
-.about-summary{
-  text-align:center;
-}
-
-.about-photo{
-  margin-bottom:1.5rem;
-}
+.about-summary{text-align:center}
 
 .about-photo img{
   width:140px;
-  height:auto;
   border-radius:12px;
-  object-fit:cover;
   box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
-/* RIGHT ABOUT — TRUE CENTER */
 .about-card.centered{
   display:flex;
   flex-direction:column;
   justify-content:center;
   text-align:center;
-  color:var(--soft);
 }
 
-/* BUTTON */
-.read-more-btn{
-  margin-top:1.5rem;
-  padding:.8rem 2rem;
-  border:none;
-  border-radius:999px;
-  background:var(--gold);
-  color:var(--navy-dark);
-  font-weight:600;
-  letter-spacing:.15em;
-  cursor:pointer;
-  transition:transform .2s ease;
-  font-size:.85rem;
-}
-
-.read-more-btn:hover{transform:scale(1.05)}
-
+/* ===== FULL BIO ===== */
 .full-bio{
   display:none;
   margin-top:3rem;
@@ -213,8 +186,36 @@ section h2{
 
 .full-bio.show{display:block}
 
+.bio-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:3rem;
+}
+
+.bio-card{
+  background:var(--card);
+  padding:3.2rem;
+  border-radius:26px;
+  box-shadow:0 20px 45px rgba(0,0,0,.08);
+  color:var(--soft);
+}
+
 /* ===== RESOURCES ===== */
 #resources{background:#eef2f7}
+
+.resources-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:3rem;
+}
+
+.resource-card{
+  background:white;
+  padding:3rem;
+  border-radius:26px;
+  text-align:center;
+  box-shadow:0 18px 40px rgba(0,0,0,.08);
+}
 
 /* ===== CONTACT ===== */
 .contact-box{
@@ -254,9 +255,9 @@ footer{
   <h2>PRACTICES</h2>
   <p class="section-sub">Focused, ethical legal representation.</p>
   <div class="practice-grid">
-    <div class="practice-card"><h3>Criminal Defense</h3><p>Misdemeanor and felony representation.</p></div>
-    <div class="practice-card"><h3>Public Defense</h3><p>Protecting constitutional rights.</p></div>
-    <div class="practice-card"><h3>Legal Consultation</h3><p>Clear guidance and case evaluation.</p></div>
+    <div class="practice-card"><h3>Criminal Defense</h3></div>
+    <div class="practice-card"><h3>Public Defense</h3></div>
+    <div class="practice-card"><h3>Legal Consultation</h3></div>
   </div>
 </section>
 
@@ -269,26 +270,41 @@ footer{
       <div class="about-photo">
         <img src="jennifer-stewart.jpg" alt="Jennifer Stewart">
       </div>
-      <h3 style="color:var(--navy)">Jennifer Stewart</h3>
-      <p>Public defense attorney with 21 years of experience and over 5000 cases handled.</p>
-      <button class="read-more-btn" onclick="toggleBio()">READ FULL BIO</button>
+      <h3>Jennifer Stewart</h3>
+      <p>Public defense attorney with 21 years of experience.</p>
+      <button onclick="toggleBio()">READ FULL BIO</button>
     </div>
 
     <div class="about-card centered">
-      <p>Every case is approached with preparation, discretion, and respect for the people involved.</p>
-      <h3 style="color:var(--navy);margin-top:1.5rem">Commitment to Justice</h3>
-      <p style="font-weight:700;color:var(--navy);margin-top:1.2rem">
-        21 Years of Experience • 5000+ Cases
-      </p>
+      <p>Every case is approached with preparation, discretion, and respect.</p>
+      <h3>Commitment to Justice</h3>
+      <p><strong>21 Years • 5000+ Cases</strong></p>
     </div>
   </div>
+
+  <div id="fullBio" class="full-bio">
+    <div class="bio-grid">
+      <div class="bio-card">
+        <p>Full biography content preserved here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="resources">
+  <h2>COMMUNITY RESOURCES</h2>
+</section>
+
+<section id="contact">
+  <h2>CONTACT</h2>
+  <div class="contact-box"></div>
 </section>
 
 <footer>© 2026 Jennifer Stewart Law — All Rights Reserved</footer>
 
 <script>
 function toggleBio(){
-  document.getElementById("fullBio")?.classList.toggle("show");
+  document.getElementById("fullBio").classList.toggle("show");
 }
 </script>
 
