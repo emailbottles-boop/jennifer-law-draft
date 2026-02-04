@@ -163,30 +163,30 @@ section h2{
 
 .about-summary{text-align:center}
 
+/* 🔧 PHOTO FIX — NO BORDER, NO SHADOW */
 .about-photo img{
   width:140px;
+  height:auto;
   border-radius:12px;
-  box-shadow:0 10px 30px rgba(0,0,0,.15);
+  border:none;
+  box-shadow:none;
 }
 
-/* 🔒 BUTTON – cannot disappear */
-.bio-btn{
-  margin-top:1.6rem;
-  background:var(--navy);
-  color:white;
+/* BUTTON */
+.read-more-btn{
+  margin-top:1.5rem;
+  padding:.8rem 2rem;
   border:none;
-  padding:.85rem 2.2rem;
   border-radius:999px;
+  background:var(--gold);
+  color:var(--navy-dark);
   font-weight:600;
   letter-spacing:.15em;
   cursor:pointer;
-  transition:transform .2s ease, background .2s ease;
+  transition:transform .2s ease;
 }
 
-.bio-btn:hover{
-  transform:scale(1.05);
-  background:var(--navy-dark);
-}
+.read-more-btn:hover{transform:scale(1.05)}
 
 .about-card.centered{
   display:flex;
@@ -198,7 +198,7 @@ section h2{
 /* ===== FULL BIO ===== */
 .full-bio{
   display:none;
-  margin-top:3.5rem;
+  margin-top:3rem;
   padding-top:3rem;
   border-top:2px solid #e0e0e0;
 }
@@ -212,6 +212,38 @@ section h2{
   box-shadow:0 20px 45px rgba(0,0,0,.08);
   color:var(--soft);
 }
+
+/* ===== RESOURCES ===== */
+#resources{background:#eef2f7}
+
+.resources-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:3rem;
+}
+
+.resource-card{
+  background:white;
+  padding:3.1rem;
+  border-radius:26px;
+  text-align:center;
+  box-shadow:0 18px 40px rgba(0,0,0,.08);
+  display:flex;
+  flex-direction:column;
+}
+
+.resource-card a{
+  margin-top:auto;
+  padding:.9rem 2.4rem;
+  border-radius:999px;
+  background:var(--navy);
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  transition:transform .2s ease;
+}
+
+.resource-card a:hover{transform:scale(1.05)}
 
 /* ===== CONTACT ===== */
 .contact-box{
@@ -238,6 +270,17 @@ footer{
   <div class="motto">Public Defense You Can Trust</div>
 </header>
 
+<section id="practices">
+  <h2>PRACTICES</h2>
+  <p class="section-sub">Focused, ethical legal representation.</p>
+
+  <div class="practice-grid">
+    <div class="practice-card"><h3>Criminal Defense</h3><p>Misdemeanor and felony representation.</p></div>
+    <div class="practice-card"><h3>Public Defense</h3><p>Protecting constitutional rights.</p></div>
+    <div class="practice-card"><h3>Legal Consultation</h3><p>Clear guidance and case evaluation.</p></div>
+  </div>
+</section>
+
 <section id="about">
   <h2>ABOUT</h2>
   <p class="section-sub">Professional, compassionate advocacy.</p>
@@ -249,26 +292,33 @@ footer{
       </div>
       <h3>Jennifer Stewart</h3>
       <p>Public defense attorney with more than 21 years of experience.</p>
-      <button class="bio-btn" onclick="toggleBio()">READ FULL BIO</button>
+      <button class="read-more-btn" onclick="toggleBio()">READ FULL BIO</button>
     </div>
 
     <div class="about-card centered">
       <p>Every case is approached with preparation, discretion, and respect.</p>
       <h3>Commitment to Justice</h3>
-      <p><strong>21+ Years • Thousands of Clients</strong></p>
+      <p><strong>21+ Years • 5,000+ Cases</strong></p>
     </div>
   </div>
 
   <div id="fullBio" class="full-bio">
     <div class="bio-card">
-      <p>Jennifer Stewart was born in Puyallup, Washington, and spent much of her early life in Thurston and Lewis Counties. As a single mother in the early 1990s, she began her academic journey at Centralia Community College, later attending Yakima Community College, and ultimately earning her Associate of Arts degree from Centralia.</p>
-
-      <p>In 1996, she relocated to the Seattle area and was admitted to the University of Washington. While attending UW, Jennifer worked as a law clerk at Stewart Beall &amp; MacNichols P.S. and earned her Bachelor of Science degree in Speech and Hearing Sciences in 2000.</p>
-
-      <p>Jennifer pursued licensure through the Washington State Bar Association’s Rule Six Law Clerk Program. During this time, she was authorized to practice as a Rule Nine Legal Intern and served as a public defender in several Washington jurisdictions, successfully trying four of five criminal jury trials before taking the bar exam.</p>
-
-      <p>She passed the Washington State Bar Exam on her first attempt in 2006 and was admitted as an attorney in early 2007. Since then, Jennifer has earned a reputation as a tenacious, highly prepared advocate with extensive trial experience across Municipal, District, and Superior Courts throughout Washington State.</p>
+      <p>Jennifer Stewart was born in Puyallup, Washington, and spent much of her early life in Thurston and Lewis Counties. As a single mother in the early 1990s, she began her academic journey at Centralia Community College and ultimately earned her Associate of Arts degree.</p>
+      <p>She later attended the University of Washington, earning a Bachelor of Science degree in Speech and Hearing Sciences while working as a law clerk. Jennifer pursued licensure through the Washington State Bar Association’s Rule Six Law Clerk Program and served as a Rule Nine Legal Intern in multiple jurisdictions.</p>
+      <p>After passing the Washington State Bar Exam on her first attempt in 2006, she was admitted as an attorney in 2007. Since then, she has represented thousands of clients across Washington State and is recognized as a tenacious, highly prepared, and fearless trial advocate.</p>
     </div>
+  </div>
+</section>
+
+<section id="resources">
+  <h2>COMMUNITY RESOURCES</h2>
+  <p class="section-sub">Support services available to clients and families.</p>
+
+  <div class="resources-grid">
+    <div class="resource-card"><h3>Food Banks</h3><a href="https://www.feedingamerica.org" target="_blank">FIND FOOD</a></div>
+    <div class="resource-card"><h3>Mental Health</h3><a href="https://www.opencounseling.com" target="_blank">SUPPORT</a></div>
+    <div class="resource-card"><h3>WA DSHS</h3><a href="https://www.dshs.wa.gov" target="_blank">VISIT</a></div>
   </div>
 </section>
 
