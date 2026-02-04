@@ -73,6 +73,7 @@ nav{
   display:flex;
   gap:2.5rem;
   flex-wrap:wrap;
+  justify-content:center;
 }
 
 .nav-links a{
@@ -80,6 +81,7 @@ nav{
   text-decoration:none;
   font-weight:600;
   letter-spacing:.15em;
+  font-size:.95rem;
 }
 
 .nav-links a:hover{color:var(--gold)}
@@ -253,6 +255,43 @@ section h2{
   text-align:center;
 }
 
+form{
+  max-width:560px;
+  margin:3rem auto 0;
+  display:flex;
+  flex-direction:column;
+  gap:1.4rem;
+}
+
+input,textarea{
+  padding:1.1rem;
+  border-radius:14px;
+  border:1px solid #ccd6e0;
+  font-size:1rem;
+}
+
+button[type="submit"]{
+  margin-top:1.5rem;
+  padding:1.1rem 3rem;
+  border:none;
+  border-radius:999px;
+  background:var(--navy);
+  color:white;
+  font-weight:600;
+  letter-spacing:.15em;
+  cursor:pointer;
+  transition:transform .2s ease;
+}
+
+button[type="submit"]:hover{transform:scale(1.05)}
+
+.form-success{
+  display:none;
+  margin-top:2rem;
+  font-weight:600;
+  color:var(--navy);
+}
+
 footer{
   text-align:center;
   padding:2.5rem 1rem;
@@ -268,6 +307,15 @@ footer{
   <h1>JENNIFER STEWART LAW</h1>
   <p>Dedicated public defense representation grounded in fairness, dignity, and results.</p>
   <div class="motto">Public Defense You Can Trust</div>
+
+  <nav>
+    <div class="nav-links">
+      <a href="#practices">PRACTICES</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+    <a href="#resources" class="resources-btn">RESOURCES</a>
+  </nav>
 </header>
 
 <section id="practices">
@@ -304,7 +352,7 @@ footer{
   <div id="fullBio" class="full-bio">
     <div class="bio-card">
       <p>Jennifer Stewart was born in Puyallup, Washington, and spent much of her early life in Thurston and Lewis Counties. As a single mother in the early 1990s, she began her academic journey at Centralia Community College and ultimately earned her Associate of Arts degree.</p>
-      <p>She later attended the University of Washington, earning a Bachelor of Science degree in Speech and Hearing Sciences while working as a law clerk. Jennifer pursued licensure through the Washington State Bar Association’s Rule Six Law Clerk Program and served as a Rule Nine Legal Intern in multiple jurisdictions.</p>
+      <p>She later attended the University of Washington, earning a Bachelor of Science degree in Speech and Hearing Sciences while working as a law clerk. Jennifer pursued licensure through the Washington State Bar Association's Rule Six Law Clerk Program and served as a Rule Nine Legal Intern in multiple jurisdictions.</p>
       <p>After passing the Washington State Bar Exam on her first attempt in 2006, she was admitted as an attorney in 2007. Since then, she has represented thousands of clients across Washington State and is recognized as a tenacious, highly prepared, and fearless trial advocate.</p>
     </div>
   </div>
@@ -327,11 +375,43 @@ footer{
   </div>
 </section>
 
+<section id="contact">
+  <h2>CONTACT</h2>
+  <div class="contact-box">
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <form
+      action="https://formspree.io/f/mnjzwvzl"
+      method="POST"
+      target="hidden_iframe"
+      onsubmit="handleSubmit()"
+    >
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Briefly describe your situation" required></textarea>
+      <button type="submit">GET IN TOUCH</button>
+    </form>
+
+    <div class="form-success" id="formSuccess">
+      Thank you — your message has been sent.
+    </div>
+
+  </div>
+</section>
+
 <footer>© 2026 Jennifer Stewart Law — All Rights Reserved</footer>
 
 <script>
 function toggleBio(){
   document.getElementById("fullBio").classList.toggle("show");
+}
+
+function handleSubmit(){
+  setTimeout(() => {
+    document.querySelector("form").style.display = "none";
+    document.getElementById("formSuccess").style.display = "block";
+  }, 500);
 }
 </script>
 
