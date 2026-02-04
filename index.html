@@ -26,7 +26,7 @@ body{
   font-family:Inter,system-ui,sans-serif;
   background:var(--bg);
   color:var(--text);
-  line-height:1.85;
+  line-height:1.8;
 }
 
 /* ===== HEADER ===== */
@@ -35,22 +35,41 @@ header{
     linear-gradient(rgba(11,28,45,.9),rgba(11,28,45,.9)),
     url("legalbooks.jpeg") center/cover no-repeat;
   color:white;
-  padding:5.5rem 1.5rem 4.5rem;
+  padding:6rem 1.5rem 4rem;
   text-align:center;
 }
 
-/* ===== NAV ===== */
+header h1{
+  font-size:4rem;
+  margin:0 0 1rem;
+  letter-spacing:.08em;
+}
+
+header p{
+  max-width:850px;
+  margin:0 auto 1.5rem;
+  font-size:1.15rem;
+}
+
+.motto{
+  color:var(--gold);
+  letter-spacing:.18em;
+  font-weight:600;
+  text-transform:uppercase;
+}
+
+/* ===== NAV (BELOW TITLE) ===== */
 nav{
+  margin-top:3rem;
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:2rem;
-  margin-bottom:3.5rem;
+  gap:1.8rem;
 }
 
 .nav-links{
   display:flex;
-  gap:2.8rem;
+  gap:2.5rem;
   flex-wrap:wrap;
 }
 
@@ -58,8 +77,7 @@ nav{
   color:white;
   text-decoration:none;
   font-weight:600;
-  letter-spacing:.18em;
-  transition:color .2s ease;
+  letter-spacing:.15em;
 }
 
 .nav-links a:hover{color:var(--gold)}
@@ -67,36 +85,15 @@ nav{
 .resources-btn{
   background:var(--gold);
   color:var(--navy-dark);
-  padding:.85rem 2.6rem;
+  padding:.8rem 2.4rem;
   border-radius:999px;
-  font-weight:700;
+  font-weight:600;
   letter-spacing:.15em;
   text-decoration:none;
   transition:transform .2s ease;
 }
 
 .resources-btn:hover{transform:scale(1.05)}
-
-header h1{
-  font-size:4.2rem;
-  letter-spacing:.08em;
-  margin:0 0 1.2rem;
-}
-
-header p{
-  font-size:1.2rem;
-  max-width:850px;
-  margin:0 auto;
-}
-
-.motto{
-  margin-top:1.4rem;
-  font-size:1.05rem;
-  letter-spacing:.18em;
-  color:var(--gold);
-  text-transform:uppercase;
-  font-weight:600;
-}
 
 /* ===== SECTIONS ===== */
 section{
@@ -109,16 +106,16 @@ section h2{
   text-align:center;
   font-size:2.3rem;
   letter-spacing:.18em;
-  margin-bottom:1.2rem;
+  margin-bottom:1rem;
   color:var(--navy);
 }
 
 .section-sub{
   text-align:center;
-  font-size:1.25rem;
   color:var(--soft);
   max-width:900px;
   margin:0 auto 3rem;
+  font-size:1.2rem;
 }
 
 /* ===== PRACTICES ===== */
@@ -130,17 +127,14 @@ section h2{
 
 .practice-card{
   background:var(--card);
-  padding:3.2rem;
+  padding:3rem;
   border-radius:26px;
   text-align:center;
   box-shadow:0 20px 45px rgba(0,0,0,.08);
-  transition:transform .3s ease, box-shadow .3s ease;
+  transition:transform .3s ease;
 }
 
-.practice-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 25px 55px rgba(0,0,0,.12);
-}
+.practice-card:hover{transform:translateY(-8px)}
 
 /* ===== ABOUT ===== */
 .about-grid{
@@ -151,40 +145,19 @@ section h2{
 
 .about-card{
   background:var(--card);
-  padding:3.2rem;
+  padding:3rem;
   border-radius:26px;
   box-shadow:0 20px 45px rgba(0,0,0,.08);
-  transition:transform .3s ease, box-shadow .3s ease;
 }
-
-.about-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 25px 55px rgba(0,0,0,.12);
-}
-
-.about-summary{text-align:center}
 
 .about-photo img{
   width:140px;
-  border-radius:12px;
+  border-radius:10px;
   border:none;
   box-shadow:none;
 }
 
-.read-more-btn{
-  margin-top:1.5rem;
-  padding:.8rem 2rem;
-  border:none;
-  border-radius:999px;
-  background:var(--gold);
-  color:var(--navy-dark);
-  font-weight:600;
-  letter-spacing:.15em;
-  cursor:pointer;
-  transition:transform .2s ease;
-}
-
-.read-more-btn:hover{transform:scale(1.05)}
+.about-summary{text-align:center}
 
 .about-card.centered{
   display:flex;
@@ -193,19 +166,31 @@ section h2{
   text-align:center;
 }
 
+.bio-btn{
+  margin-top:1.5rem;
+  padding:.8rem 2rem;
+  border:none;
+  border-radius:999px;
+  background:var(--navy);
+  color:white;
+  font-weight:600;
+  letter-spacing:.15em;
+  cursor:pointer;
+}
+
+.bio-btn:hover{transform:scale(1.05)}
+
 /* ===== FULL BIO ===== */
 .full-bio{
   display:none;
   margin-top:3rem;
-  padding-top:3rem;
-  border-top:2px solid #e0e0e0;
 }
 
 .full-bio.show{display:block}
 
 .bio-card{
   background:var(--card);
-  padding:3.2rem;
+  padding:3rem;
   border-radius:26px;
   box-shadow:0 20px 45px rgba(0,0,0,.08);
   color:var(--soft);
@@ -222,24 +207,21 @@ section h2{
 
 .resource-card{
   background:white;
-  padding:3.1rem;
+  padding:3rem;
   border-radius:26px;
   text-align:center;
   box-shadow:0 18px 40px rgba(0,0,0,.08);
-  display:flex;
-  flex-direction:column;
 }
 
 .resource-card a{
-  margin-top:auto;
-  padding:.9rem 2.4rem;
+  display:inline-block;
+  margin-top:1.5rem;
+  padding:.8rem 2.2rem;
   border-radius:999px;
   background:var(--navy);
   color:white;
   text-decoration:none;
   font-weight:600;
-  letter-spacing:.15em;
-  transition:transform .2s ease;
 }
 
 .resource-card a:hover{transform:scale(1.05)}
@@ -256,6 +238,10 @@ footer{
 <body>
 
 <header>
+  <h1>JENNIFER STEWART LAW</h1>
+  <p>Dedicated public defense representation grounded in fairness, dignity, and results.</p>
+  <div class="motto">Public Defense You Can Trust</div>
+
   <nav>
     <div class="nav-links">
       <a href="#practices">PRACTICES</a>
@@ -264,10 +250,68 @@ footer{
     </div>
     <a href="#resources" class="resources-btn">COMMUNITY HELP</a>
   </nav>
-
-  <h1>JENNIFER STEWART LAW</h1>
-  <p>Dedicated public defense representation grounded in fairness, dignity, and results.</p>
-  <div class="motto">Public Defense You Can Trust</div>
 </header>
 
-<!-- rest of page unchanged -->
+<section id="practices">
+  <h2>PRACTICES</h2>
+  <p class="section-sub">Focused criminal defense representation.</p>
+
+  <div class="practice-grid">
+    <div class="practice-card">Criminal Defense</div>
+    <div class="practice-card">DUI Defense</div>
+    <div class="practice-card">Domestic Violence</div>
+    <div class="practice-card">Assault & Theft</div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>ABOUT</h2>
+
+  <div class="about-grid">
+    <div class="about-card about-summary">
+      <div class="about-photo">
+        <img src="jennifer-stewart.jpg" alt="Jennifer Stewart">
+      </div>
+      <h3>Jennifer Stewart</h3>
+      <p>Public defense attorney with over 21 years of experience.</p>
+      <button class="bio-btn" onclick="toggleBio()">READ FULL BIO</button>
+    </div>
+
+    <div class="about-card centered">
+      <h3>Client-Focused Advocacy</h3>
+      <p>Every case is treated with preparation, discretion, and respect.</p>
+    </div>
+  </div>
+
+  <div id="fullBio" class="full-bio">
+    <div class="bio-card">
+      <p>Jennifer Stewart is a Washington State attorney with more than two decades of experience representing accused individuals throughout Municipal, District, and Superior Courts. She has handled thousands of criminal cases and is known for her tenacious advocacy, trial readiness, and commitment to achieving the best possible outcome for every client.</p>
+    </div>
+  </div>
+</section>
+
+<section id="resources">
+  <h2>COMMUNITY RESOURCES</h2>
+
+  <div class="resources-grid">
+    <div class="resource-card">
+      <h3>WA DSHS</h3>
+      <a href="https://www.dshs.wa.gov" target="_blank">VISIT</a>
+    </div>
+    <div class="resource-card">
+      <h3>Northwest Justice Project</h3>
+      <a href="https://nwjustice.org" target="_blank">VISIT</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Jennifer Stewart Law</footer>
+
+<script>
+function toggleBio(){
+  document.getElementById("fullBio").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
