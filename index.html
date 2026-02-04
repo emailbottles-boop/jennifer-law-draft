@@ -38,19 +38,16 @@ header{
   color:white;
   padding:6.5rem 1.5rem 5rem;
   -webkit-overflow-scrolling: touch;
+  text-align:center;
 }
 
 .header-content{
   max-width:1150px;
   margin:0 auto;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:4rem;
-  align-items:center;
 }
 
 .header-text{
-  text-align:left;
+  text-align:center;
 }
 
 header h1{
@@ -61,7 +58,8 @@ header h1{
 
 header p{
   font-size:1.2rem;
-  margin:0;
+  margin:0 auto;
+  max-width:850px;
 }
 
 .motto{
@@ -71,20 +69,6 @@ header p{
   color:var(--gold);
   text-transform:uppercase;
   font-weight:600;
-}
-
-.header-image{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.header-image img{
-  width:100%;
-  max-width:220px;
-  border-radius:20px;
-  box-shadow:0 25px 60px rgba(0,0,0,.4);
-  border:4px solid var(--gold);
 }
 
 /* ===== NAV ===== */
@@ -109,6 +93,11 @@ nav{
   font-weight:600;
   letter-spacing:.15em;
   font-size:.95rem;
+  transition:color 0.2s ease;
+}
+
+.nav-links a:hover{
+  color:var(--gold);
 }
 
 .resources-btn{
@@ -119,6 +108,11 @@ nav{
   font-weight:600;
   letter-spacing:.15em;
   text-decoration:none;
+  transition:transform 0.2s ease;
+}
+
+.resources-btn:hover{
+  transform:scale(1.05);
 }
 
 /* ===== SECTION BASE ===== */
@@ -179,9 +173,90 @@ section h2{
   padding:3.2rem;
   border-radius:26px;
   box-shadow:0 20px 45px rgba(0,0,0,.08);
-  font-size:1.25rem;
+  font-size:1.05rem;
   color:var(--soft);
   text-align:center;
+}
+
+.about-summary{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.about-photo{
+  margin-bottom:1.5rem;
+}
+
+.about-photo img{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid var(--gold);
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.about-card p{
+  margin-bottom:1.2rem;
+  text-align:left;
+}
+
+.about-card p:last-child{
+  margin-bottom:0;
+}
+
+.read-more-btn{
+  margin-top:1.5rem;
+  padding:.8rem 2rem;
+  border:none;
+  border-radius:999px;
+  background:var(--gold);
+  color:var(--navy-dark);
+  font-weight:600;
+  letter-spacing:.15em;
+  cursor:pointer;
+  transition:transform 0.2s ease;
+  font-size:.85rem;
+}
+
+.read-more-btn:hover{
+  transform:scale(1.05);
+}
+
+.full-bio{
+  display:none;
+  margin-top:3rem;
+  padding-top:3rem;
+  border-top:2px solid #e0e0e0;
+}
+
+.full-bio.show{
+  display:block;
+}
+
+.bio-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:3rem;
+}
+
+.bio-card{
+  background:var(--card);
+  padding:3.2rem;
+  border-radius:26px;
+  box-shadow:0 20px 45px rgba(0,0,0,.08);
+  font-size:1.05rem;
+  color:var(--soft);
+  text-align:left;
+}
+
+.bio-card p{
+  margin-bottom:1.2rem;
+}
+
+.bio-card p:last-child{
+  margin-bottom:0;
 }
 
 /* ===== RESOURCES ===== */
@@ -215,6 +290,11 @@ section h2{
   font-size:.95rem;
   letter-spacing:.15em;
   font-weight:600;
+  transition:transform 0.2s ease;
+}
+
+.resource-card a:hover{
+  transform:scale(1.05);
 }
 
 /* ===== CONTACT ===== */
@@ -250,6 +330,11 @@ button{
   font-weight:600;
   letter-spacing:.15em;
   cursor:pointer;
+  transition:transform 0.2s ease;
+}
+
+button:hover{
+  transform:scale(1.05);
 }
 
 .form-success{
@@ -269,15 +354,6 @@ footer{
 
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 900px) {
-  .header-content{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
-  
-  .header-text{
-    text-align:center;
-  }
-  
   header h1{
     font-size:2.8rem;
   }
@@ -297,10 +373,6 @@ footer{
       <h1>JENNIFER STEWART LAW</h1>
       <p>Dedicated public defense representation grounded in fairness, dignity, and results.</p>
       <div class="motto">Public Defense You Can Trust</div>
-    </div>
-    
-    <div class="header-image">
-      <img src="jennifer-stewart.jpg" alt="Jennifer Stewart">
     </div>
   </div>
 
@@ -330,8 +402,51 @@ footer{
   <p class="section-sub">Professional, compassionate advocacy.</p>
 
   <div class="about-grid">
-    <div class="about-card">Jennifer Stewart is a public defense attorney dedicated to justice, dignity, and equitable legal representation.</div>
-    <div class="about-card">Every case is approached with preparation, discretion, and respect for the people involved.</div>
+    <div class="about-card about-summary">
+      <div class="about-photo">
+        <img src="jennifer-stewart.jpg" alt="Jennifer Stewart">
+      </div>
+      <h3 style="color: var(--navy); margin-bottom: 1rem;">Jennifer Stewart</h3>
+      <p>Jennifer Stewart is a public defense attorney dedicated to justice, dignity, and equitable legal representation with 21 years of experience and over 5000 cases handled.</p>
+      <button class="read-more-btn" onclick="toggleBio()">READ FULL BIO</button>
+    </div>
+    
+    <div class="about-card">
+      <h3 style="color: var(--navy); margin-bottom: 1rem;">Commitment to Justice</h3>
+      <p>Every case is approached with preparation, discretion, and respect for the people involved. Jenn is recognized as both a shrewd litigator, for her ingenuity in developing unique legal arguments, and a fearless trial attorney, for her willingness to try the difficult cases to a jury.</p>
+      <p style="font-weight: 700; color: var(--navy); margin-top: 1.5rem; font-size: 1.2rem;">21 Years of Experience • 5000+ Cases</p>
+    </div>
+  </div>
+  
+  <div id="fullBio" class="full-bio">
+    <div class="bio-grid">
+      <div class="bio-card">
+        <h3 style="color: var(--navy); margin-bottom: 1rem;">Background</h3>
+        <p>Jennifer Stewart was born in Puyallup, Washington. She spent her youth in Thurston and Lewis Counties, except for a six month period when she lived in Chicago, Illinois, where she was briefly a fan of Walter Payton, Jim McMahon and William "the Refrigerator" Perry.</p>
+        
+        <p>In the early 1990's, as a single mother, Jenn enrolled at Centralia Community College, then briefly transferred to Yakima Community College, before ultimately receiving her Associates of Arts Degree from Centralia. In 1996 she moved to the Seattle area and, in 1998, was admitted to the University of Washington.</p>
+      </div>
+      
+      <div class="bio-card">
+        <h3 style="color: var(--navy); margin-bottom: 1rem;">Education & Training</h3>
+        <p>During her years at the UW Jenn began working at Stewart Beall & MacNichols P.S., as a Law Clerk. In 2000, she received her Bachelor of Sciences Degree in Speech and Hearing Sciences. Following her graduation, Jenn continued working at the firm and, after much thought decided to enroll in the Washington State Bar Association's Rule Six Program. Stephen Rochon, Municipal Court Judge for the cities of Pacific and Maple Valley, served as her initial program tutor. Scott Stewart tutored her through the final years of her program.</p>
+        
+        <p>Two and one-half years into the Rule Six Program Jenn was authorized to engage in the limited practice of law as a Rule Nine Legal Intern. In her work as an intern she served as a public defender in the cities of Kent, Kenmore, North Bend, Sammamish and Lakewood. During this period, and prior to taking the bar exam, Jenn won four of five criminal jury trials.</p>
+      </div>
+      
+      <div class="bio-card">
+        <h3 style="color: var(--navy); margin-bottom: 1rem;">Legal Career</h3>
+        <p>After successfully completing the Rule Six Program, Jenn took the August 2006 bar exam, passing on her first attempt, and was admitted as an attorney by the Washington State Bar in early 2007. As an attorney she has continued to develop a reputation as a tenacious and aggressive advocate on behalf of each of her clients. Within the firm Jenn is recognized as both shrewd litigator, for her ingenuity in developing unique legal arguments, and a fearless trial attorney, for her willingness to try the difficult cases to a jury. For Jenn, each client's situation is personal and she works hard to ensure the very best outcome in each of their cases.</p>
+      </div>
+      
+      <div class="bio-card">
+        <h3 style="color: var(--navy); margin-bottom: 1rem;">Experience</h3>
+        <p>Since becoming an attorney, Jenn has added the cities of Milton, Seatac and Kirkland to the jurisdictions in which she has worked as a public defender. She has represented accused persons in most of the Municipal, District and Superior Courts throughout King and Pierce County, as well as numerous other courts throughout the state of Washington.</p>
+        
+        <p>Jenn has represented thousands of persons accused of crimes ranging from Driving Under the Influence to Assault Domestic Violence, from Reckless Driving to Patronizing a Prostitute, from Shoplifting to Robbery, and from Misdemeanor charges of Possession of Marijuana to Felony charges of Violation of the Uniform Controlled Substances Act (VUCSA), as well as numerous other criminal offenses prohibited by the laws of both the State and the local municipalities.</p>
+      </div>
+    </div>
+    <button class="read-more-btn" onclick="toggleBio()" style="margin-top: 2rem;">CLOSE BIO</button>
   </div>
 </section>
 
@@ -387,6 +502,18 @@ function handleSubmit(){
     document.querySelector("form").style.display = "none";
     document.getElementById("formSuccess").style.display = "block";
   }, 500);
+}
+
+function toggleBio(){
+  const fullBio = document.getElementById("fullBio");
+  fullBio.classList.toggle("show");
+  
+  // Smooth scroll to bio if opening
+  if(fullBio.classList.contains("show")){
+    setTimeout(() => {
+      fullBio.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 100);
+  }
 }
 </script>
 
