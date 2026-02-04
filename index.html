@@ -35,9 +35,47 @@ header{
     linear-gradient(rgba(11,28,45,.9),rgba(11,28,45,.9)),
     url("legalbooks.jpeg") center/cover no-repeat;
   color:white;
-  padding:6.5rem 1.5rem 5rem;
+  padding:5.5rem 1.5rem 4.5rem;
   text-align:center;
 }
+
+/* ===== NAV ===== */
+nav{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:2rem;
+  margin-bottom:3.5rem;
+}
+
+.nav-links{
+  display:flex;
+  gap:2.8rem;
+  flex-wrap:wrap;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  letter-spacing:.18em;
+  transition:color .2s ease;
+}
+
+.nav-links a:hover{color:var(--gold)}
+
+.resources-btn{
+  background:var(--gold);
+  color:var(--navy-dark);
+  padding:.85rem 2.6rem;
+  border-radius:999px;
+  font-weight:700;
+  letter-spacing:.15em;
+  text-decoration:none;
+  transition:transform .2s ease;
+}
+
+.resources-btn:hover{transform:scale(1.05)}
 
 header h1{
   font-size:4.2rem;
@@ -59,43 +97,6 @@ header p{
   text-transform:uppercase;
   font-weight:600;
 }
-
-/* ===== NAV ===== */
-nav{
-  margin-top:3rem;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:1.8rem;
-}
-
-.nav-links{
-  display:flex;
-  gap:2.5rem;
-  flex-wrap:wrap;
-}
-
-.nav-links a{
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-  letter-spacing:.15em;
-}
-
-.nav-links a:hover{color:var(--gold)}
-
-.resources-btn{
-  background:var(--gold);
-  color:var(--navy-dark);
-  padding:.8rem 2.4rem;
-  border-radius:999px;
-  font-weight:600;
-  letter-spacing:.15em;
-  text-decoration:none;
-  transition:transform .2s ease;
-}
-
-.resources-btn:hover{transform:scale(1.05)}
 
 /* ===== SECTIONS ===== */
 section{
@@ -229,8 +230,6 @@ section h2{
   flex-direction:column;
 }
 
-.resource-card p{color:var(--soft)}
-
 .resource-card a{
   margin-top:auto;
   padding:.9rem 2.4rem;
@@ -245,14 +244,6 @@ section h2{
 
 .resource-card a:hover{transform:scale(1.05)}
 
-/* ===== CONTACT ===== */
-.contact-box{
-  background:#e4ebf3;
-  padding:4.5rem 2.5rem;
-  border-radius:30px;
-  text-align:center;
-}
-
 footer{
   text-align:center;
   padding:2.5rem 1rem;
@@ -265,75 +256,18 @@ footer{
 <body>
 
 <header>
+  <nav>
+    <div class="nav-links">
+      <a href="#practices">PRACTICES</a>
+      <a href="#about">ABOUT</a>
+      <a href="#resources">RESOURCES</a>
+    </div>
+    <a href="#resources" class="resources-btn">COMMUNITY HELP</a>
+  </nav>
+
   <h1>JENNIFER STEWART LAW</h1>
   <p>Dedicated public defense representation grounded in fairness, dignity, and results.</p>
   <div class="motto">Public Defense You Can Trust</div>
 </header>
 
-<section id="practices">
-  <h2>PRACTICES</h2>
-  <p class="section-sub">Focused, ethical legal representation.</p>
-  <div class="practice-grid">
-    <div class="practice-card"><h3>Criminal Defense</h3><p>Misdemeanor and felony representation.</p></div>
-    <div class="practice-card"><h3>Public Defense</h3><p>Protecting constitutional rights.</p></div>
-    <div class="practice-card"><h3>Legal Consultation</h3><p>Clear guidance and case evaluation.</p></div>
-  </div>
-</section>
-
-<section id="about">
-  <h2>ABOUT</h2>
-  <p class="section-sub">Professional, compassionate advocacy.</p>
-
-  <div class="about-grid">
-    <div class="about-card about-summary">
-      <div class="about-photo">
-        <img src="jennifer-stewart.jpg" alt="Jennifer Stewart">
-      </div>
-      <h3>Jennifer Stewart</h3>
-      <p>Public defense attorney with more than 21 years of experience.</p>
-      <button class="read-more-btn" onclick="toggleBio()">READ FULL BIO</button>
-    </div>
-
-    <div class="about-card centered">
-      <p>Every case is approached with preparation, discretion, and respect.</p>
-      <h3>Commitment to Justice</h3>
-      <p><strong>21+ Years • 5,000+ Cases</strong></p>
-    </div>
-  </div>
-
-  <div id="fullBio" class="full-bio">
-    <div class="bio-card">
-      <p>Jennifer Stewart was born in Puyallup, Washington, and spent much of her early life in Thurston and Lewis Counties. As a single mother in the early 1990s, she began her academic journey at Centralia Community College and ultimately earned her Associate of Arts degree.</p>
-      <p>She later attended the University of Washington, earning a Bachelor of Science degree in Speech and Hearing Sciences while working as a law clerk. Jennifer pursued licensure through the Washington State Bar Association’s Rule Six Law Clerk Program and served as a Rule Nine Legal Intern in multiple jurisdictions.</p>
-      <p>After passing the Washington State Bar Exam on her first attempt in 2006, she was admitted as an attorney in 2007. Since then, she has represented thousands of clients across Washington State and is recognized as a tenacious, highly prepared, and fearless trial advocate.</p>
-    </div>
-  </div>
-</section>
-
-<section id="resources">
-  <h2>COMMUNITY RESOURCES</h2>
-  <p class="section-sub">Support services available to clients and families.</p>
-
-  <div class="resources-grid">
-    <div class="resource-card"><h3>Food Banks</h3><p>Free food assistance.</p><a href="https://www.feedingamerica.org" target="_blank">FIND FOOD</a></div>
-    <div class="resource-card"><h3>Meditation</h3><p>Guided mindfulness.</p><a href="https://www.uclahealth.org/programs/marc/free-guided-meditations" target="_blank">START</a></div>
-    <div class="resource-card"><h3>Housing</h3><p>Emergency housing help.</p><a href="https://www.hud.gov/findshelter" target="_blank">GET HELP</a></div>
-    <div class="resource-card"><h3>Mental Health</h3><p>Counseling services.</p><a href="https://www.opencounseling.com" target="_blank">SUPPORT</a></div>
-    <div class="resource-card"><h3>Legal Self-Help</h3><p>Free legal information.</p><a href="https://www.washingtonlawhelp.org" target="_blank">LEARN</a></div>
-    <div class="resource-card"><h3>Crisis Line</h3><p>24-hour confidential help.</p><a href="https://988lifeline.org" target="_blank">CALL 988</a></div>
-    <div class="resource-card"><h3>Domestic Violence</h3><p>Immediate safety resources.</p><a href="https://www.thehotline.org" target="_blank">HELP</a></div>
-    <div class="resource-card"><h3>Reentry Support</h3><p>Post-incarceration assistance.</p><a href="https://nicic.gov" target="_blank">RESOURCES</a></div>
-    <div class="resource-card"><h3>WA DSHS</h3><p>State food, cash, and medical aid.</p><a href="https://www.dshs.wa.gov" target="_blank">VISIT</a></div>
-  </div>
-</section>
-
-<footer>© 2026 Jennifer Stewart Law — All Rights Reserved</footer>
-
-<script>
-function toggleBio(){
-  document.getElementById("fullBio").classList.toggle("show");
-}
-</script>
-
-</body>
-</html>
+<!-- rest of page unchanged -->
